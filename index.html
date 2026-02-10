@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NF Suplementos Votuporanga | Suplementos Originais com Entrega Grátis</title>
+    <meta name="description" content="Suplementos originais com entrega grátis e no mesmo dia em Votuporanga. Whey, Creatina, Pré-treino e mais. Atendimento personalizado pelo WhatsApp.">
+    <meta name="keywords" content="suplementos votuporanga, whey protein, creatina, pré-treino, entrega grátis, NF Suplementos">
+    <meta property="og:title" content="NF Suplementos | Votuporanga">
+    <meta property="og:description" content="Suplementos originais com entrega grátis e no mesmo dia em Votuporanga.">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="logo.png" type="image/png">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MN4V6NWL');</script>
+    <!-- End Google Tag Manager -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --black: #0A0A0A;
+            --dark: #111111;
+            --dark-card: #1A1A1A;
+            --dark-border: #2A2A2A;
+            --white: #FFFFFF;
+            --gray: #999999;
+            --light-gray: #CCCCCC;
+            --green-whatsapp: #25D366;
+            --green-dark: #1DA851;
+            --accent: #E8E8E8;
+            --gold: #C9A84C;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--black);
+            color: var(--white);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-60px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(60px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        @keyframes bounceIn {
+            0% { transform: scale(0.3); opacity: 0; }
+            50% { transform: scale(1.05); }
+            70% { transform: scale(0.9); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== FLOATING WHATSAPP BUTTON ===== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            animation: bounceIn 0.6s 1s both;
+        }
+
+        .whatsapp-float-label {
+            background: var(--white);
+            color: var(--black);
+            padding: 10px 18px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 14px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+            white-space: nowrap;
+            display: none;
+        }
+
+        .whatsapp-float-btn {
+            width: 64px;
+            height: 64px;
+            background: var(--green-whatsapp);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 24px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 32px rgba(37, 211, 102, 0.6);
+        }
+
+        .whatsapp-float-btn svg {
+            width: 34px;
+            height: 34px;
+            fill: white;
+        }
+
+        @media (min-width: 768px) {
+            .whatsapp-float-label { display: block; }
+        }
+
+        /* ===== TOP BAR ===== */
+        .top-bar {
+            background: var(--green-whatsapp);
+            color: var(--black);
+            text-align: center;
+            padding: 10px 16px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .top-bar span {
+            animation: pulse 2s infinite;
+            display: inline-block;
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            padding: 20px 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid var(--dark-border);
+            background: var(--black);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(20px);
+        }
+
+        .header img {
+            height: 50px;
+            filter: brightness(1.1);
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            padding: 60px 20px 50px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background: radial-gradient(ellipse at top, #1a1a1a 0%, var(--black) 70%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.02) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--dark-card);
+            border: 1px solid var(--dark-border);
+            color: var(--green-whatsapp);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 24px;
+            animation: fadeInUp 0.6s 0.2s both;
+        }
+
+        .hero h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(42px, 10vw, 72px);
+            line-height: 0.95;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.6s 0.4s both;
+        }
+
+        .hero h1 .highlight {
+            color: var(--green-whatsapp);
+        }
+
+        .hero-sub {
+            font-size: 17px;
+            color: var(--gray);
+            max-width: 500px;
+            margin: 0 auto 32px;
+            line-height: 1.6;
+            animation: fadeInUp 0.6s 0.6s both;
+            font-weight: 300;
+        }
+
+        .hero-sub strong {
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--green-whatsapp);
+            color: var(--black);
+            padding: 18px 40px;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 17px;
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.6s 0.8s both;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(37, 211, 102, 0.3);
+        }
+
+        .hero-cta svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        /* ===== TRUST STRIP ===== */
+        .trust-strip {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-top: 1px solid var(--dark-border);
+            border-bottom: 1px solid var(--dark-border);
+        }
+
+        .trust-item {
+            padding: 24px 16px;
+            text-align: center;
+            border-right: 1px solid var(--dark-border);
+        }
+
+        .trust-item:last-child {
+            border-right: none;
+        }
+
+        .trust-icon {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .trust-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 16px;
+            letter-spacing: 1px;
+            margin-bottom: 2px;
+        }
+
+        .trust-desc {
+            font-size: 11px;
+            color: var(--gray);
+            font-weight: 300;
+        }
+
+        /* ===== SECTION STYLING ===== */
+        .section {
+            padding: 60px 20px;
+        }
+
+        .section-label {
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 3px;
+            color: var(--green-whatsapp);
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(32px, 7vw, 48px);
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+
+        .section-desc {
+            color: var(--gray);
+            font-size: 15px;
+            line-height: 1.6;
+            max-width: 500px;
+            font-weight: 300;
+        }
+
+        /* ===== FERNANDA SECTION ===== */
+        .fernanda-section {
+            padding: 60px 20px;
+            background: var(--dark);
+        }
+
+        .fernanda-grid {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .fernanda-img {
+            width: 100%;
+            max-width: 360px;
+            margin: 0 auto;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .fernanda-img img {
+            width: 100%;
+            display: block;
+            border-radius: 20px;
+        }
+
+        .fernanda-content {
+            text-align: center;
+        }
+
+        .fernanda-quote {
+            font-size: 18px;
+            font-style: italic;
+            color: var(--light-gray);
+            line-height: 1.6;
+            margin-bottom: 16px;
+            font-weight: 300;
+        }
+
+        .fernanda-name {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 24px;
+            letter-spacing: 1px;
+        }
+
+        .fernanda-role {
+            color: var(--green-whatsapp);
+            font-size: 13px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        @media (min-width: 768px) {
+            .fernanda-grid {
+                grid-template-columns: auto 1fr;
+            }
+            .fernanda-content {
+                text-align: left;
+            }
+        }
+
+        /* ===== STORE GALLERY ===== */
+        .gallery-section {
+            padding: 60px 0;
+            overflow: hidden;
+        }
+
+        .gallery-section .section-header {
+            padding: 0 20px;
+            margin-bottom: 32px;
+        }
+
+        .gallery-scroll {
+            display: flex;
+            gap: 12px;
+            overflow-x: auto;
+            padding: 0 20px;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+
+        .gallery-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .gallery-item {
+            flex: 0 0 280px;
+            height: 380px;
+            border-radius: 16px;
+            overflow: hidden;
+            scroll-snap-align: start;
+            position: relative;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* ===== OFFERS / PRODUCTS ===== */
+        .offers-section {
+            padding: 60px 20px;
+            background: var(--dark);
+        }
+
+        .offers-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            max-width: 600px;
+            margin: 32px auto 0;
+        }
+
+        .offer-card {
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 1;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .offer-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .offer-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .offer-card-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 16px;
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 100%);
+        }
+
+        .offer-tag {
+            display: inline-block;
+            background: var(--green-whatsapp);
+            color: var(--black);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ===== CATALOG CTA ===== */
+        .catalog-section {
+            padding: 70px 20px;
+            text-align: center;
+            position: relative;
+            background: linear-gradient(135deg, var(--black) 0%, #151515 50%, var(--black) 100%);
+        }
+
+        .catalog-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(37, 211, 102, 0.05) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .catalog-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .catalog-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(36px, 8vw, 56px);
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+
+        .catalog-desc {
+            color: var(--gray);
+            font-size: 16px;
+            max-width: 460px;
+            margin: 0 auto 32px;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        .catalog-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--white);
+            color: var(--black);
+            padding: 18px 36px;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .catalog-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(255,255,255,0.1);
+        }
+
+        .catalog-cta svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        /* ===== INSTAGRAM SECTION ===== */
+        .instagram-section {
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid var(--dark-border);
+            border-bottom: 1px solid var(--dark-border);
+        }
+
+        .instagram-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--white);
+            font-weight: 500;
+            font-size: 16px;
+            padding: 14px 28px;
+            border: 1px solid var(--dark-border);
+            border-radius: 60px;
+            transition: all 0.3s ease;
+        }
+
+        .instagram-link:hover {
+            border-color: var(--white);
+            background: rgba(255,255,255,0.05);
+        }
+
+        .instagram-link svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        /* ===== FINAL CTA ===== */
+        .final-cta-section {
+            padding: 80px 20px;
+            text-align: center;
+            background: var(--dark);
+        }
+
+        .final-cta-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(36px, 9vw, 60px);
+            line-height: 1;
+            margin-bottom: 12px;
+        }
+
+        .final-cta-sub {
+            color: var(--gray);
+            font-size: 16px;
+            margin-bottom: 32px;
+            font-weight: 300;
+        }
+
+        .final-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--green-whatsapp);
+            color: var(--black);
+            padding: 20px 48px;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .final-cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(37, 211, 102, 0.35);
+        }
+
+        .final-cta-btn svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .final-phone {
+            margin-top: 16px;
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        .final-phone a {
+            color: var(--light-gray);
+            text-decoration: none;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            padding: 24px 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #555;
+            border-top: 1px solid var(--dark-border);
+        }
+
+        .footer a {
+            color: #777;
+            text-decoration: none;
+        }
+
+        /* ===== SOCIAL PROOF COUNTER ===== */
+        .social-proof {
+            padding: 50px 20px;
+            text-align: center;
+            background: var(--dark);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-proof::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(37,211,102,0.04) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .proof-number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(60px, 15vw, 100px);
+            line-height: 1;
+            color: var(--green-whatsapp);
+            margin-bottom: 4px;
+        }
+
+        .proof-label {
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .proof-sub {
+            color: var(--gray);
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        .proof-stars {
+            display: flex;
+            justify-content: center;
+            gap: 4px;
+            margin-top: 16px;
+        }
+
+        .proof-stars svg {
+            width: 24px;
+            height: 24px;
+            fill: #FBBF24;
+        }
+
+        .proof-google {
+            margin-top: 8px;
+            font-size: 12px;
+            color: var(--gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        /* ===== REVIEWS ===== */
+        .reviews-section {
+            padding: 60px 20px;
+            background: var(--black);
+        }
+
+        .reviews-section .section-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 600px) {
+            .reviews-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        .review-card {
+            background: var(--dark-card);
+            border: 1px solid var(--dark-border);
+            border-radius: 16px;
+            padding: 24px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .review-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(37,211,102,0.3);
+        }
+
+        .review-stars {
+            display: flex;
+            gap: 2px;
+            margin-bottom: 12px;
+        }
+
+        .review-stars svg {
+            width: 16px;
+            height: 16px;
+            fill: #FBBF24;
+        }
+
+        .review-text {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--light-gray);
+            margin-bottom: 16px;
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        .review-author {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .review-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--dark-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+            color: var(--green-whatsapp);
+        }
+
+        .review-name {
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .review-source {
+            font-size: 11px;
+            color: var(--gray);
+        }
+
+        /* ===== FAQ ===== */
+        .faq-section {
+            padding: 60px 20px;
+            background: var(--dark);
+        }
+
+        .faq-section .section-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .faq-list {
+            max-width: 700px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .faq-item {
+            background: var(--dark-card);
+            border: 1px solid var(--dark-border);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: border-color 0.3s ease;
+        }
+
+        .faq-item.active {
+            border-color: var(--green-whatsapp);
+        }
+
+        .faq-question {
+            padding: 18px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 15px;
+            user-select: none;
+            transition: color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            color: var(--green-whatsapp);
+        }
+
+        .faq-icon {
+            font-size: 20px;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+            margin-left: 12px;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+        }
+
+        .faq-answer-inner {
+            padding: 0 20px 18px;
+            color: var(--gray);
+            font-size: 14px;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        /* ===== PAYMENT STRIP ===== */
+        .payment-strip {
+            padding: 32px 20px;
+            text-align: center;
+            border-top: 1px solid var(--dark-border);
+            border-bottom: 1px solid var(--dark-border);
+        }
+
+        .payment-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--gray);
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+
+        .payment-methods {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .payment-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--light-gray);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .payment-item-icon {
+            font-size: 24px;
+        }
+
+        .payment-highlight {
+            background: rgba(37,211,102,0.1);
+            border: 1px solid rgba(37,211,102,0.2);
+            padding: 4px 12px;
+            border-radius: 20px;
+            color: var(--green-whatsapp);
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 480px) {
+            .trust-title { font-size: 13px; }
+            .trust-desc { font-size: 10px; }
+            .trust-icon { font-size: 22px; }
+            .trust-item { padding: 16px 8px; }
+            .offers-grid { gap: 8px; }
+            .hero { padding: 40px 16px 40px; }
+            .gallery-item { flex: 0 0 240px; height: 320px; }
+        }
+
+        @media (min-width: 768px) {
+            .offers-grid {
+                grid-template-columns: repeat(4, 1fr);
+                max-width: 800px;
+            }
+            .hero { padding: 80px 20px 70px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MN4V6NWL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- ===== TOP BAR ===== -->
+<div class="top-bar">
+    <span>🚀 Entrega GRÁTIS e no MESMO DIA em Votuporanga</span>
+</div>
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+    <img src="logo.png" alt="NF Suplementos">
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+    <div class="hero-badge">📍 Votuporanga — SP</div>
+    <h1>
+        SUPLEMENTOS<br>
+        ORIGINAIS COM<br>
+        <span class="highlight">ENTREGA GRÁTIS</span>
+    </h1>
+    <p class="hero-sub">
+        Tudo <strong>a pronta entrega</strong>. Receba no <strong>mesmo dia</strong> em Votuporanga. Atendimento rápido e personalizado pelo WhatsApp.
+    </p>
+    <a href="https://wa.me/5517997587526?text=Olá!%20Vi%20o%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos!" class="hero-cta" onclick="dataLayer.push({'event': 'cta_hero_click'});">
+        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Fale Conosco
+    </a>
+</section>
+
+<!-- ===== TRUST STRIP ===== -->
+<div class="trust-strip">
+    <div class="trust-item">
+        <div class="trust-icon">🚚</div>
+        <div class="trust-title">ENTREGA NO MESMO DIA</div>
+        <div class="trust-desc">Grátis em Votuporanga</div>
+    </div>
+    <div class="trust-item">
+        <div class="trust-icon">✅</div>
+        <div class="trust-title">100% ORIGINAIS</div>
+        <div class="trust-desc">Produtos autênticos</div>
+    </div>
+    <div class="trust-item">
+        <div class="trust-icon">💬</div>
+        <div class="trust-title">ATENDIMENTO RÁPIDO</div>
+        <div class="trust-desc">Personalizado no WhatsApp</div>
+    </div>
+</div>
+
+<!-- ===== SOCIAL PROOF COUNTER ===== -->
+<section class="social-proof animate-on-scroll">
+    <div class="proof-number" id="clientCounter">3.000+</div>
+    <div class="proof-label">Clientes Satisfeitos em Votuporanga</div>
+    <div class="proof-sub">A loja de suplementos que mais cresce na região</div>
+    <div class="proof-stars">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    </div>
+    <div class="proof-google">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="#4285F4"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        Avaliações no Google
+    </div>
+</section>
+
+<!-- ===== STORE GALLERY ===== -->
+<section class="gallery-section">
+    <div class="section-header animate-on-scroll">
+        <div class="section-label">Conheça Nossa Loja</div>
+        <h2 class="section-title">ESTOQUE COMPLETO<br>PRONTA ENTREGA</h2>
+        <p class="section-desc">Mais de 200 produtos das melhores marcas do Brasil. Tudo disponível para você levar hoje.</p>
+    </div>
+    <div class="gallery-scroll">
+        <div class="gallery-item"><img src="loja5.jpeg" alt="Entrada NF Suplementos" loading="lazy"></div>
+        <div class="gallery-item"><img src="loja1.jpeg" alt="Estoque NF Suplementos - Creatinas" loading="lazy"></div>
+        <div class="gallery-item"><img src="loja2.jpeg" alt="Estoque NF Suplementos - Whey Protein" loading="lazy"></div>
+        <div class="gallery-item"><img src="loja3.jpeg" alt="Estoque NF Suplementos - Pré-treinos" loading="lazy"></div>
+        <div class="gallery-item"><img src="loja4.jpeg" alt="Estoque NF Suplementos - Produtos" loading="lazy"></div>
+    </div>
+</section>
+
+<!-- ===== OFFERS ===== -->
+<section class="offers-section">
+    <div style="text-align:center;" class="animate-on-scroll">
+        <div class="section-label">Ofertas da Semana</div>
+        <h2 class="section-title">PREÇOS QUE VOCÊ<br>SÓ ENCONTRA AQUI</h2>
+        <p class="section-desc" style="margin: 0 auto;">Condições especiais para quem compra pelo WhatsApp. Aproveite!</p>
+    </div>
+    <div class="offers-grid">
+        <a href="https://wa.me/5517997587526?text=Olá!%20Quero%20saber%20mais%20sobre%20a%20Creatina%20ByoPure!" class="offer-card" onclick="dataLayer.push({'event': 'offer_click', 'product': 'creatina_byopure'});">
+            <img src="oferta_creatina.jpeg" alt="Creatina ByoPure R$49,90" loading="lazy">
+            <div class="offer-card-overlay"><span class="offer-tag">Oferta</span></div>
+        </a>
+        <a href="https://wa.me/5517997587526?text=Olá!%20Quero%20saber%20mais%20sobre%20a%20Creatina%20Kreas!" class="offer-card" onclick="dataLayer.push({'event': 'offer_click', 'product': 'kreas'});">
+            <img src="oferta_kreas.jpeg" alt="Kreas Creatina R$69,90" loading="lazy">
+            <div class="offer-card-overlay"><span class="offer-tag">Oferta</span></div>
+        </a>
+        <a href="https://wa.me/5517997587526?text=Olá!%20Quero%20saber%20mais%20sobre%20o%20CrazyBull!" class="offer-card" onclick="dataLayer.push({'event': 'offer_click', 'product': 'crazybull'});">
+            <img src="oferta_crazybull.jpeg" alt="CrazyBull Pré-treino R$95" loading="lazy">
+            <div class="offer-card-overlay"><span class="offer-tag">Oferta</span></div>
+        </a>
+        <a href="https://wa.me/5517997587526?text=Olá!%20Quero%20saber%20mais%20sobre%20o%20Whey%20Crazyness!" class="offer-card" onclick="dataLayer.push({'event': 'offer_click', 'product': 'whey_crazyness'});">
+            <img src="oferta_whey.jpeg" alt="Whey Crazyness R$98,50" loading="lazy">
+            <div class="offer-card-overlay"><span class="offer-tag">Exclusivo</span></div>
+        </a>
+    </div>
+</section>
+
+<!-- ===== FERNANDA ===== -->
+<section class="fernanda-section">
+    <div class="fernanda-grid animate-on-scroll">
+        <div class="fernanda-img">
+            <img src="fernanda.png" alt="Fernanda - NF Suplementos" loading="lazy">
+        </div>
+        <div class="fernanda-content">
+            <div class="section-label">Quem Te Atende</div>
+            <h2 class="section-title">ATENDIMENTO<br>PERSONALIZADO</h2>
+            <p class="fernanda-quote">
+                "Aqui você não é só mais um cliente. Te ajudo a encontrar o suplemento ideal pro seu objetivo, com o melhor custo-benefício."
+            </p>
+            <div class="fernanda-name">FERNANDA</div>
+            <div class="fernanda-role">Atendimento & Consultoria NF</div>
+            <br>
+            <a href="https://wa.me/5517997587526?text=Olá%20Fernanda!%20Vi%20o%20site%20e%20quero%20uma%20indicação%20de%20suplemento!" class="hero-cta" style="font-size:14px; padding: 14px 28px;" onclick="dataLayer.push({'event': 'cta_fernanda_click'});">
+                <svg viewBox="0 0 24 24" style="width:18px;height:18px;"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Falar com a Fernanda
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<section class="reviews-section">
+    <div class="section-header animate-on-scroll">
+        <div class="section-label">O que nossos clientes dizem</div>
+        <h2 class="section-title">AVALIAÇÕES REAIS<br>DO GOOGLE</h2>
+    </div>
+    <div class="reviews-grid">
+        <div class="review-card animate-on-scroll">
+            <div class="review-stars">
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <p class="review-text">"Ótimo atendimento, ótimos produtos, ótimos preços, entrega rapida!"</p>
+            <div class="review-author">
+                <div class="review-avatar">A</div>
+                <div>
+                    <div class="review-name">Ana Bertuolo P.</div>
+                    <div class="review-source">Google Reviews</div>
+                </div>
+            </div>
+        </div>
+        <div class="review-card animate-on-scroll">
+            <div class="review-stars">
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <p class="review-text">"Excelência em qualidade e atendimento!! Grande variedades em produtos e ótimos preços. Sem falar da rápida e gratuita entrega!! Super recomendo!!"</p>
+            <div class="review-author">
+                <div class="review-avatar">B</div>
+                <div>
+                    <div class="review-name">Bruna Fernandes</div>
+                    <div class="review-source">Google Reviews</div>
+                </div>
+            </div>
+        </div>
+        <div class="review-card animate-on-scroll">
+            <div class="review-stars">
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <p class="review-text">"Grande variedade de produtos!! Ótimas marcas!! Preço justo!! Entrega rápida e grátis!! Excelente atendimento!! Eu recomendo!!!"</p>
+            <div class="review-author">
+                <div class="review-avatar">D</div>
+                <div>
+                    <div class="review-name">Dijalma J.</div>
+                    <div class="review-source">Google Reviews</div>
+                </div>
+            </div>
+        </div>
+        <div class="review-card animate-on-scroll">
+            <div class="review-stars">
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <p class="review-text">"Ótimo atendimento e custo benefício!!! Além da entrega gratuita 😍"</p>
+            <div class="review-author">
+                <div class="review-avatar">H</div>
+                <div>
+                    <div class="review-name">Heitor Neto</div>
+                    <div class="review-source">Google Reviews</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CATALOG CTA ===== -->
+<section class="catalog-section">
+    <div class="animate-on-scroll">
+        <div class="catalog-icon">📋</div>
+        <h2 class="catalog-title">QUER VER TODOS<br>OS PRODUTOS?</h2>
+        <p class="catalog-desc">Receba nosso <strong style="color:var(--white)">catálogo completo</strong> com todos os produtos e preços atualizados direto no seu WhatsApp.</p>
+        <a href="https://wa.me/5517997587526?text=Olá!%20Quero%20receber%20o%20catálogo%20completo%20de%20produtos!" class="catalog-cta" onclick="dataLayer.push({'event': 'cta_catalogo_click'});">
+            <svg viewBox="0 0 24 24" style="fill:currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Receber Catálogo Completo
+        </a>
+    </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq-section">
+    <div class="section-header animate-on-scroll">
+        <div class="section-label">Dúvidas Frequentes</div>
+        <h2 class="section-title">PERGUNTAS<br>E RESPOSTAS</h2>
+    </div>
+    <div class="faq-list">
+        <div class="faq-item" onclick="this.classList.toggle('active')">
+            <div class="faq-question">
+                Quais formas de pagamento vocês aceitam?
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">Aceitamos <strong style="color:var(--white)">Pix, cartão de crédito e débito</strong>. No cartão, você parcela em até <strong style="color:var(--green-whatsapp)">4x sem juros</strong>! No Pix a confirmação é instantânea e seu pedido já entra pra entrega na hora.</div>
+            </div>
+        </div>
+        <div class="faq-item" onclick="this.classList.toggle('active')">
+            <div class="faq-question">
+                A entrega é realmente grátis?
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">Sim! A entrega é <strong style="color:var(--white)">100% grátis para Votuporanga</strong> e no <strong style="color:var(--white)">mesmo dia</strong>! Para cidades vizinhas, também fazemos <strong style="color:var(--white)">retirada no local</strong> — muitos clientes da região já passam aqui pra buscar. É só combinar pelo WhatsApp!</div>
+            </div>
+        </div>
+        <div class="faq-item" onclick="this.classList.toggle('active')">
+            <div class="faq-question">
+                Os produtos são originais?
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">Todos os nossos produtos são <strong style="color:var(--white)">100% originais e lacrados</strong>, comprados diretamente dos fabricantes e distribuidores autorizados. Trabalhamos com as melhores marcas do mercado brasileiro.</div>
+            </div>
+        </div>
+        <div class="faq-item" onclick="this.classList.toggle('active')">
+            <div class="faq-question">
+                Como faço para comprar?
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">Super simples! Clique em qualquer botão de <strong style="color:var(--white)">WhatsApp</strong> aqui no site e fale direto com a gente. Te ajudamos a escolher o produto ideal, combinamos o pagamento e já mandamos a entrega. Tudo pelo Zap!</div>
+            </div>
+        </div>
+        <div class="faq-item" onclick="this.classList.toggle('active')">
+            <div class="faq-question">
+                Vocês têm loja física?
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">Temos estoque físico em Votuporanga com <strong style="color:var(--white)">todos os produtos a pronta entrega</strong>. Nosso atendimento é pelo WhatsApp para garantir agilidade, mas todo produto que você vê no catálogo está disponível pra envio imediato.</div>
+            </div>
+        </div>
+        <div class="faq-item" onclick="this.classList.toggle('active')">
+            <div class="faq-question">
+                Não sei qual suplemento comprar, vocês ajudam?
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">Com certeza! A Fernanda faz um <strong style="color:var(--white)">atendimento personalizado</strong> pra entender seu objetivo (ganho de massa, emagrecimento, energia, saúde) e indicar o melhor suplemento pro seu caso e seu bolso. É só chamar no WhatsApp!</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== PAYMENT STRIP ===== -->
+<div class="payment-strip">
+    <div class="payment-label">Formas de Pagamento</div>
+    <div class="payment-methods">
+        <div class="payment-item">
+            <span class="payment-item-icon">💳</span>
+            Cartão de Crédito
+        </div>
+        <div class="payment-item">
+            <span class="payment-item-icon">💳</span>
+            Cartão de Débito
+        </div>
+        <div class="payment-item">
+            <span class="payment-item-icon">📱</span>
+            <span class="payment-highlight">Pix</span>
+        </div>
+        <div class="payment-item">
+            <span class="payment-item-icon">🔄</span>
+            Até 4x sem juros
+        </div>
+    </div>
+</div>
+
+<!-- ===== INSTAGRAM ===== -->
+<section class="instagram-section">
+    <a href="https://www.instagram.com/_nfsuplementos" target="_blank" rel="noopener" class="instagram-link" onclick="dataLayer.push({'event': 'instagram_click'});">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        Siga @_nfsuplementos
+    </a>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="final-cta-section">
+    <div class="animate-on-scroll">
+        <h2 class="final-cta-title">BORA TREINAR<br>COM O MELHOR?</h2>
+        <p class="final-cta-sub">Peça agora e receba hoje em Votuporanga</p>
+        <a href="https://wa.me/5517997587526?text=Olá!%20Quero%20fazer%20um%20pedido!" class="final-cta-btn" onclick="dataLayer.push({'event': 'cta_final_click'});">
+            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Fazer Meu Pedido
+        </a>
+        <p class="final-phone">ou ligue: <a href="tel:+5517997587526">(17) 99758-7526</a></p>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <p>© 2026 NF Suplementos — Votuporanga/SP | <a href="https://www.instagram.com/_nfsuplementos" target="_blank">@_nfsuplementos</a></p>
+</footer>
+
+<!-- ===== FLOATING WHATSAPP ===== -->
+<a href="https://wa.me/5517997587526?text=Olá!%20Vi%20o%20site%20da%20NF%20Suplementos!" class="whatsapp-float" target="_blank" rel="noopener" onclick="dataLayer.push({'event': 'whatsapp_float_click'});">
+    <span class="whatsapp-float-label">Peça pelo WhatsApp</span>
+    <div class="whatsapp-float-btn">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </div>
+</a>
+
+<!-- ===== SCROLL ANIMATION ===== -->
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+    // Counter animation
+    const counterEl = document.getElementById('clientCounter');
+    let counted = false;
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !counted) {
+                counted = true;
+                let current = 0;
+                const target = 3000;
+                const duration = 2000;
+                const step = target / (duration / 16);
+                const timer = setInterval(() => {
+                    current += step;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                        counterEl.textContent = '3.000+';
+                    } else {
+                        counterEl.textContent = Math.floor(current).toLocaleString('pt-BR') + '+';
+                    }
+                }, 16);
+            }
+        });
+    }, { threshold: 0.5 });
+    if (counterEl) counterObserver.observe(counterEl);
+</script>
+
+</body>
+</html>
