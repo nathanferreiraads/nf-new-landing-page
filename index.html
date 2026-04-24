@@ -48,6 +48,12 @@
     .wrap { max-width: 540px; margin: 0 auto; width: 100%; }
     .wrap-lg { max-width: 680px; margin: 0 auto; width: 100%; }
 
+    /* ============ DESKTOP WRAP OVERRIDES ============ */
+    @media (min-width: 900px) {
+        .wrap { max-width: 1120px; }
+        .wrap-lg { max-width: 1120px; }
+    }
+
     /* ============ TOP STRIPE ============ */
     .stripe {
         background: var(--neon);
@@ -60,7 +66,7 @@
         gap: 40px;
         padding: 9px 0;
         white-space: nowrap;
-        animation: marquee 28s linear infinite;
+        animation: marquee 16s linear infinite;
         font-size: 12px;
         font-weight: 800;
         letter-spacing: 0.12em;
@@ -555,14 +561,14 @@
     }
     .fern-img {
         position: relative;
-        aspect-ratio: 4 / 5;
+        aspect-ratio: 9 / 10;
         max-height: 460px;
         overflow: hidden;
     }
     .fern-img img {
         width: 100%; height: 100%;
         object-fit: cover;
-        object-position: center 15%;
+        object-position: center top;
     }
     .fern-img::after {
         content: "";
@@ -814,6 +820,9 @@
     .foot-social:hover { border-color: var(--neon); color: var(--neon); }
     .foot-social svg { width: 16px; height: 16px; }
 
+    .hero-visual { display: none; }
+    @media (min-width: 900px) { .hero-visual { display: flex; } }
+
     /* ============ STICKY WA BUTTON ============ */
     .sticky-wa {
         position: fixed;
@@ -852,6 +861,129 @@
     /* add spacing below page so sticky doesn't cover final CTA */
     body { padding-bottom: 80px; }
     @media (min-width: 720px) { body { padding-bottom: 0; } }
+
+    /* ============ DESKTOP LAYOUT ============ */
+    @media (min-width: 900px) {
+        section { padding: 90px 40px; }
+
+        /* Hero desktop: 2 columns */
+        .hero { padding: 80px 40px 90px; }
+        .hero-inner {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 60px;
+            align-items: center;
+            max-width: 1120px;
+        }
+        .hero h1 { font-size: clamp(56px, 6.5vw, 88px); }
+        .hero-sub { font-size: 18px; max-width: none; }
+        .cta-primary { max-width: 420px; }
+
+        /* Hero visual on the right */
+        .hero-visual {
+            position: relative;
+            aspect-ratio: 4/5;
+            border-radius: 24px;
+            overflow: hidden;
+            background: linear-gradient(145deg, rgba(182,255,26,0.15), rgba(10,10,10,0.9)), var(--card);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 40px;
+        }
+        .hero-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 20%;
+        }
+        .hero-visual::after {
+            content: "";
+            position: absolute; inset: 0;
+            background: linear-gradient(180deg, transparent 50%, rgba(10,10,10,0.6) 100%);
+        }
+        .hero-visual-tag {
+            position: absolute;
+            bottom: 24px; left: 24px;
+            background: var(--neon);
+            color: var(--black);
+            padding: 8px 14px;
+            border-radius: 999px;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            z-index: 2;
+        }
+
+        /* Trust row */
+        .trust { padding: 48px 40px 0; }
+        .trust-grid { gap: 16px; }
+        .trust-cell { padding: 28px 20px; }
+        .trust-ico { width: 48px; height: 48px; }
+        .trust-ico svg { width: 26px; height: 26px; }
+        .trust-title { font-size: 14px; }
+        .trust-sub { font-size: 12px; }
+
+        /* Section titles bigger on desktop */
+        .sec-title { font-size: 72px !important; }
+        .sec-lead { font-size: 17px; max-width: 600px; }
+
+        /* Steps: 3 columns */
+        .steps { grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; }
+        .step { padding: 28px 24px; }
+        .step-num { font-size: 72px; }
+        .step-body h3 { font-size: 26px; }
+        .step-body p { font-size: 15px; }
+
+        /* Offers: 4 columns */
+        .offers-grid { grid-template-columns: repeat(4, 1fr); gap: 18px; }
+
+        /* Brands bigger chips */
+        .brand-chip { height: 84px; min-width: 200px; }
+        .brand-chip .brand-name { font-size: 22px; }
+
+        /* Fernanda: side by side */
+        .fern-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: stretch;
+        }
+        .fern-img { aspect-ratio: auto; max-height: none; height: 100%; }
+        .fern-body { padding: 48px 40px; display: flex; flex-direction: column; justify-content: center; }
+        .fern-body h3 { font-size: 56px; }
+        .fern-quote { font-size: 19px; }
+        .fern-cta { max-width: 320px; }
+
+        /* Reviews: 4 columns */
+        .reviews-grid { grid-template-columns: repeat(4, 1fr); }
+        .rev { padding: 24px; }
+        .rev-text { font-size: 14px; }
+
+        /* Final CTA */
+        .final { padding: 120px 40px 140px; }
+        .final h2 { font-size: 104px; }
+        .final p { font-size: 18px; max-width: 520px; }
+
+        /* Stats section bigger */
+        .stats-section-inner { display: grid; grid-template-columns: repeat(3, 1fr); }
+
+        /* Offers head can align horizontally */
+        .offers-head { flex-wrap: nowrap; align-items: flex-end; }
+
+        /* Header bigger max-width */
+        .header-inner { max-width: 1120px; padding: 18px 40px; }
+
+        /* Footer */
+        .foot { padding: 48px 40px; }
+    }
+
+    @media (min-width: 1200px) {
+        .hero h1 { font-size: clamp(88px, 6.5vw, 104px); }
+        .sec-title { font-size: 84px !important; }
+        .final h2 { font-size: 128px; }
+    }
 
     /* ============ FADE IN ============ */
     .reveal {
@@ -898,6 +1030,7 @@
 <!-- ============ HERO ============ -->
 <section class="hero">
     <div class="wrap hero-inner">
+        <div class="hero-text">
         <div class="hero-kicker">
             <span class="pulse"></span>
             <span>📍 Votuporanga · SP · Aberto agora</span>
@@ -906,8 +1039,7 @@
             Suplementos<br>
             <em>Originais</em><br>
             em Votuporanga.<br>
-            <span class="underline">Peça hoje,</span><br>
-            <span class="underline">receba hoje.</span>
+            <span class="underline">Peça hoje,<br>receba hoje.</span>
         </h1>
         <p class="hero-sub">
             Mais de <b>200 produtos</b> a pronta entrega. Atendimento humano e rápido pelo <b>WhatsApp</b>, sem site de carrinho, sem espera.
@@ -922,6 +1054,11 @@
         <div class="cta-subline">
             <span class="online-dot"></span>
             Fernanda está online · Responde em minutos
+        </div>
+        </div>
+        <div class="hero-visual">
+            <span class="hero-visual-tag">📦 Estoque em Votuporanga</span>
+            <img src="assets/loja1.png" alt="Loja NF Suplementos — estoque">
         </div>
     </div>
 </section>
@@ -1132,7 +1269,7 @@
         <div class="sec-eyebrow">Quem te atende</div>
 
         <div class="fern-card">
-            <div class="fern-img" style="width: 567.99px;">
+            <div class="fern-img">
                 <span class="fern-tag">Atendimento humano</span>
                 <img src="assets/fernanda.png" alt="Fernanda — NF Suplementos">
             </div>
@@ -1366,29 +1503,32 @@
         items.forEach(i => io.observe(i));
     })();
 
-    // Hide sticky WA when final section visible
+    // Hide sticky WA when final section or Fernanda section visible
     (function() {
         const sticky = document.getElementById('stickyWa');
         const finalSection = document.querySelector('.final');
-        if (!sticky || !finalSection) return;
-        const io = new IntersectionObserver((entries) => {
-            entries.forEach(e => {
-                sticky.classList.toggle('hidden', e.isIntersecting);
-            });
-        }, { threshold: 0.25 });
-        io.observe(finalSection);
+        const fernSection = document.querySelector('.fern');
+        if (!sticky) return;
 
-        // Also hide while hero visible (avoid overlap with primary CTA)
+        const hideSections = [finalSection, fernSection].filter(Boolean);
+        if (hideSections.length) {
+            const io = new IntersectionObserver((entries) => {
+                // If ANY of the hide sections is intersecting, hide
+                const anyVisible = hideSections.some(s => {
+                    const r = s.getBoundingClientRect();
+                    return r.top < window.innerHeight * 0.75 && r.bottom > window.innerHeight * 0.25;
+                });
+                sticky.classList.toggle('hidden', anyVisible);
+            }, { threshold: [0, 0.25, 0.5] });
+            hideSections.forEach(s => io.observe(s));
+        }
+
+        // Also hide while hero visible
         const hero = document.querySelector('.hero');
         if (hero) {
             const io2 = new IntersectionObserver((entries) => {
                 entries.forEach(e => {
                     if (e.isIntersecting) sticky.classList.add('hidden');
-                    else if (!finalSection.getBoundingClientRect().top < window.innerHeight * 0.75) {
-                        sticky.classList.remove('hidden');
-                    } else {
-                        sticky.classList.remove('hidden');
-                    }
                 });
             }, { threshold: 0.3 });
             io2.observe(hero);
