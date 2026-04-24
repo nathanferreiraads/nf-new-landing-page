@@ -1778,32 +1778,25 @@
         items.forEach(i => io.observe(i));
     })();
 
-    // Hide sticky WA when final section or Fernanda section visible
+    // Hide sticky WA when final section visible (has its own big CTA)
     (function() {
         const sticky = document.getElementById('stickyWa');
         const finalSection = document.querySelector('.final');
-        const fernSection = document.querySelector('.fern');
-        if (!sticky) return;
+        if (!sticky || !finalSection) return;
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                sticky.classList.toggle('hidden', e.isIntersecting);
+            });
+        }, { threshold: 0.25 });
+        io.observe(finalSection);
 
-        const hideSections = [finalSection, fernSection].filter(Boolean);
-        if (hideSections.length) {
-            const io = new IntersectionObserver((entries) => {
-                // If ANY of the hide sections is intersecting, hide
-                const anyVisible = hideSections.some(s => {
-                    const r = s.getBoundingClientRect();
-                    return r.top < window.innerHeight * 0.75 && r.bottom > window.innerHeight * 0.25;
-                });
-                sticky.classList.toggle('hidden', anyVisible);
-            }, { threshold: [0, 0.25, 0.5] });
-            hideSections.forEach(s => io.observe(s));
-        }
-
-        // Also hide while hero visible
+        // Also hide while hero visible (avoid overlap with primary CTA)
         const hero = document.querySelector('.hero');
         if (hero) {
             const io2 = new IntersectionObserver((entries) => {
                 entries.forEach(e => {
                     if (e.isIntersecting) sticky.classList.add('hidden');
+                    else sticky.classList.remove('hidden');
                 });
             }, { threshold: 0.3 });
             io2.observe(hero);
