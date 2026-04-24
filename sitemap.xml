@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://nfsuplementosvotu.com.br/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://nfsuplementosvotu.com.br/assets/loja1.png</image:loc>
+      <image:title>Estoque NF Suplementos Votuporanga</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://nfsuplementosvotu.com.br/assets/loja2.png</image:loc>
+      <image:title>Estoque NF Suplementos Votuporanga</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://nfsuplementosvotu.com.br/assets/loja3.png</image:loc>
+      <image:title>Produtos originais NF Suplementos</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://nfsuplementosvotu.com.br/assets/fernanda.png</image:loc>
+      <image:title>Atendimento NF Suplementos Votuporanga</image:title>
+    </image:image>
+  </url>
+</urlset>
