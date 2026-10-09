@@ -101,11 +101,17 @@
     for (var k in (extra || {})) if (extra.hasOwnProperty(k)) b[k] = extra[k];
     enviar(PAINEL + "/site-capi", b);
   }
+  // evento de pagina (PageView, ViewContent, chegou pela bio): espera o _fbp do pixel nascer, ate 3 s. Medido em 09/10/2026:
+  // saindo na hora, o servidor ia sem _fbp e a correspondencia no Meta caia. Clique nao espera (a pessoa esta saindo).
+  function capiDePagina(nome, id, extra) {
+    var t0 = Date.now();
+    (function tenta() { if (lerCookie("_fbp") || Date.now() - t0 > 3000) capi(nome, id, extra); else setTimeout(tenta, 200); })();
+  }
 
   // ---------- 3) PageView: o GTM lê o nf_pv_event_id; o servidor manda o mesmo ----------
   var pvId = novoId("pv");
   W.dataLayer.push({ nf_pv_event_id: pvId, nf_vid: vid, nf_pagina: pg });
-  setTimeout(function () { capi("PageView", pvId, {}); }, 800);   // espera o _fbp nascer (o pixel do GTM cria)
+  capiDePagina("PageView", pvId, {});   // espera o _fbp nascer (o pixel do GTM cria)
 
   // ---------- 4) WhatsApp: código invisível + clique gravado ----------
   // CÓPIA de netlify/lib/zerowidth.js do painel (marcaCurta + embutir). Conferida pelo script de prova de 09/10/2026.
@@ -170,7 +176,7 @@
   function evento(nome, ga4, extra) {
     var id = novoId("ev");
     W.dataLayer.push({ event: "nf_evento", nf_evento: nome, nf_evento_ga4: ga4 || nome, nf_event_id: id, nf_produto: (extra && extra.content_name) || "", nf_pagina: pg });
-    capi(nome, id, extra || {});
+    (/^(ViewContent|ClickLinkBio)$/.test(nome) ? capiDePagina : capi)(nome, id, extra || {});
     return id;
   }
   // captura (true): roda antes do clique seguir, e o href já sai com o código mesmo que o link tenha nascido depois
