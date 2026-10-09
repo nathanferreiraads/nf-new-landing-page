@@ -47,7 +47,7 @@
     });
     return o;
   }
-  function pagina() { var p = location.pathname || "/"; return /^\/catalogo/.test(p) ? "catalogo" : /^\/bio/.test(p) ? "bio" : "lp"; }
+  function pagina() { var p = location.pathname || "/"; return /^\/catalogo/.test(p) ? "catalogo" : /^\/bio/.test(p) ? "bio" : /^\/blog/.test(p) ? "blog" : "lp"; }
   function limpo(s) { return String(s == null ? "" : s).replace(/\s+/g, " ").replace(/^\s+|\s+$/g, "").slice(0, 90); }
 
   // ---------- 1) o visitante ----------
@@ -201,5 +201,5 @@
   if (pg === "catalogo") evento("ViewContent", "view_item_list", { content_name: "Catálogo NF Suplementos", content_type: "product_group" });
 
   // para a bio e para o teste
-  W.NF = { vid: vid, pagina: pg, origem: origemValida, evento: evento, embutir: embutir, decorar: decorar, versao: "2026-10-09b" };
+  W.NF = { vid: vid, pagina: pg, origem: origemValida, evento: evento, embutir: embutir, decorar: decorar, versao: "2026-10-09c" };
 })();

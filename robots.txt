@@ -1,4 +1,24 @@
+# NF Suplementos · Votuporanga-SP
+# Buscadores e IAs sao bem-vindos: o site, o catalogo e o blog existem para serem achados e citados.
 User-agent: *
+Allow: /
+Disallow: /go/
+Disallow: /tools/
+
+# assistentes e buscadores de IA (liberados de proposito)
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
 Allow: /
 
 Sitemap: https://nfsuplementosvotu.com.br/sitemap.xml

@@ -21,7 +21,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="language" content="pt-BR">
 <meta name="geo.region" content="BR-SP">
-<meta name="geo.placename" content="Votuporanga">
+<meta name="geo.placename" content="Votuporanga, São Paulo, Brasil">
+<link rel="alternate" type="text/plain" href="https://nfsuplementosvotu.com.br/llms.txt" title="LLMs.txt">
 <link rel="canonical" href="https://nfsuplementosvotu.com.br/">
 
 <!-- ============ OPEN GRAPH (Facebook, WhatsApp, LinkedIn) ============ -->
@@ -30,7 +31,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:title" content="NF Suplementos Votuporanga | Receba Hoje">
 <meta property="og:description" content="Whey, creatina, pré-treino e +200 produtos originais a pronta entrega em Votuporanga-SP. Pelo WhatsApp, com entrega grátis no mesmo dia.">
 <meta property="og:url" content="https://nfsuplementosvotu.com.br/">
-<meta property="og:image" content="https://nfsuplementosvotu.com.br/assets/loja1.png">
+<meta property="og:image" content="https://nfsuplementosvotu.com.br/assets/og-nf-suplementos.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Estoque NF Suplementos em Votuporanga">
@@ -40,88 +41,81 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="NF Suplementos Votuporanga | Receba Hoje">
 <meta name="twitter:description" content="Whey, creatina e +200 produtos a pronta entrega em Votuporanga-SP. Atendimento humano no WhatsApp.">
-<meta name="twitter:image" content="https://nfsuplementosvotu.com.br/assets/loja1.png">
+<meta name="twitter:image" content="https://nfsuplementosvotu.com.br/assets/og-nf-suplementos.jpg">
 
 <!-- ============ FAVICON ============ -->
 <link rel="icon" type="image/png" href="assets/logo.png">
 <link rel="apple-touch-icon" href="assets/logo.png">
 <meta name="theme-color" content="#0A0A0A">
 
-<!-- ============ SCHEMA.ORG — LOCAL BUSINESS ============ -->
+<!-- ============ SCHEMA.ORG — LOCAL BUSINESS (GEO) ============ -->
+<!-- NAP igual ao Perfil da Empresa no Google: nome, cidade e telefone. A loja atende online (sem endereco de rua publico). -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Store",
+  "@type": ["Store", "HealthAndBeautyBusiness"],
   "@id": "https://nfsuplementosvotu.com.br/#store",
   "name": "NF Suplementos",
-  "alternateName": "NF Suplementos Votuporanga",
-  "description": "Loja online de suplementos alimentares em Votuporanga-SP. Whey protein, creatina, pré-treino e mais de 200 produtos originais a pronta entrega.",
+  "alternateName": ["NF Suplementos Votuporanga", "NF Suplementos Votu"],
+  "description": "Loja de suplementos alimentares em Votuporanga-SP com atendimento pelo WhatsApp e entrega grátis no mesmo dia na cidade. Whey protein, creatina, pré-treino, termogênicos, vitaminas e mais de 200 produtos originais a pronta entrega, das marcas Byopure, Dux, Integralmédica, Max Titanium, Black Skull, Nyer e outras.",
+  "slogan": "Peça hoje, receba hoje.",
   "url": "https://nfsuplementosvotu.com.br/",
-  "image": "https://nfsuplementosvotu.com.br/assets/loja1.png",
+  "image": ["https://nfsuplementosvotu.com.br/assets/og-nf-suplementos.jpg", "https://nfsuplementosvotu.com.br/assets/loja1.png"],
   "logo": "https://nfsuplementosvotu.com.br/assets/logo.png",
-  "telephone": "+55 17 99758-7526",
-  "priceRange": "$$",
-  "areaServed": {
-    "@type": "City",
-    "name": "Votuporanga",
-    "containedInPlace": {
-      "@type": "State",
-      "name": "São Paulo"
-    }
-  },
+  "telephone": "+55-17-99758-7526",
+  "priceRange": "R$ 15 a R$ 320",
+  "currenciesAccepted": "BRL",
+  "paymentAccepted": "Pix, link de pagamento, pagamento na entrega",
+  "hasMap": "https://www.google.com/maps/place/?q=place_id:ChIJJ413VvNZvZQRInhUreaYYPE",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Votuporanga",
     "addressRegion": "SP",
     "addressCountry": "BR"
   },
+  "areaServed": {
+    "@type": "City",
+    "name": "Votuporanga",
+    "sameAs": "https://pt.wikipedia.org/wiki/Votuporanga",
+    "containedInPlace": { "@type": "State", "name": "São Paulo" }
+  },
   "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-      "opens": "09:00",
-      "closes": "18:00"
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": "Saturday",
-      "opens": "09:00",
-      "closes": "12:00"
-    }
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "12:00" }
   ],
-  "sameAs": [
-    "https://www.instagram.com/nfsuplementosvotu"
-  ],
+  "knowsAbout": ["whey protein", "creatina", "pré-treino", "termogênico", "suplementação esportiva", "vitaminas e minerais", "hipercalórico", "colágeno"],
+  "hasOfferCatalog": { "@type": "OfferCatalog", "name": "Catálogo NF Suplementos", "url": "https://nfsuplementosvotu.com.br/catalogo/" },
+  "sameAs": ["https://www.instagram.com/_nfsuplementos", "https://www.google.com/maps/place/?q=place_id:ChIJJ413VvNZvZQRInhUreaYYPE"],
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+55 17 99758-7526",
+    "telephone": "+55-17-99758-7526",
     "contactType": "sales",
+    "contactOption": "WhatsApp",
     "availableLanguage": "Portuguese",
-    "areaServed": "BR"
+    "areaServed": "Votuporanga"
   },
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5.0",
-    "reviewCount": "47",
+    "reviewCount": "15",
     "bestRating": "5",
     "worstRating": "1"
   }
 }
 </script>
-
 <!-- ============ SCHEMA.ORG — WEBSITE ============ -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": "https://nfsuplementosvotu.com.br/#website",
   "url": "https://nfsuplementosvotu.com.br/",
   "name": "NF Suplementos Votuporanga",
   "inLanguage": "pt-BR",
   "publisher": { "@id": "https://nfsuplementosvotu.com.br/#store" }
 }
 </script>
-
-<!-- ============ SCHEMA.ORG — FAQ ============ -->
+<!-- ============ SCHEMA.ORG — FAQ (o mesmo texto do FAQ visivel da pagina) ============ -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -132,7 +126,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "name": "Vocês entregam no mesmo dia em Votuporanga?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sim. Pedidos feitos até as 14h em Votuporanga são entregues no mesmo dia, com frete grátis."
+        "text": "Sim. Pedidos feitos até as 14h são entregues no mesmo dia em Votuporanga, com entrega grátis."
       }
     },
     {
@@ -140,7 +134,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "name": "Os suplementos são originais?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sim. Todos os produtos são originais, lacrados e comprados diretamente das marcas oficiais ou distribuidores autorizados."
+        "text": "Sim. Todos os produtos são originais e lacrados, comprados das marcas oficiais ou de distribuidores autorizados."
       }
     },
     {
@@ -148,7 +142,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "name": "Como faço o pedido?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Basta chamar pelo WhatsApp. A Fernanda te atende, passa os produtos disponíveis, combina a entrega e você paga por Pix, link de pagamento ou na entrega."
+        "text": "Pelo WhatsApp (17) 99758-7526. A Fernanda te atende, mostra o que tem a pronta entrega, combina a entrega e você paga por Pix, link de pagamento ou na entrega."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quais as formas de pagamento?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pix, link de pagamento (cartão) ou pagamento na entrega."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qual o horário de atendimento?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Segunda a sexta, das 9h às 18h, e sábado, das 9h às 12h."
       }
     },
     {
@@ -156,7 +166,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "name": "Vocês têm loja física?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Atendemos exclusivamente online em Votuporanga-SP. O endereço do estoque é passado pelo WhatsApp na hora de combinar a retirada ou entrega."
+        "text": "A NF Suplementos atende online em Votuporanga-SP e entrega na sua casa. O endereço do estoque é passado pelo WhatsApp se você preferir retirar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quais marcas vocês trabalham?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Byopure, Dux Nutrition, Integralmédica, Max Titanium, Black Skull, Probiótica, Nyer, Nutra Gold, ISN, Darkness, Dowmith e outras. O catálogo completo com preços fica em nfsuplementosvotu.com.br/catalogo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vocês entregam em outras cidades da região?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A entrega grátis no mesmo dia é para Votuporanga. Para outras cidades da região, chame no WhatsApp e consulte."
       }
     }
   ]
@@ -1262,6 +1288,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .final h2 { font-size: 128px; }
     }
 
+
+    /* ============ FAQ ============ */
+    .faqs { background: var(--black); padding: 56px 0 40px; border-top: 1px solid var(--border-soft); }
+    .faq-list { margin-top: 22px; border-top: 1px solid var(--border); }
+    .faq-list details { border-bottom: 1px solid var(--border); }
+    .faq-list summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; gap: 14px; padding: 18px 2px; font-weight: 700; font-size: 16px; color: var(--white); }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary span { color: var(--neon); font-size: 22px; line-height: 1; transition: transform .2s; }
+    .faq-list details[open] summary span { transform: rotate(45deg); }
+    .faq-list p { padding: 0 2px 18px; color: var(--light); font-size: 15px; line-height: 1.6; }
+    .faq-more { margin-top: 18px; color: var(--light); font-size: 14px; }
+    .faq-more a { color: var(--neon); text-decoration: underline; }
+    .foot-links { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin: 10px 0 4px; font-size: 13px; }
+    .foot-links a { color: var(--light); text-decoration: underline; }
     /* ============ FADE IN ============ */
     .reveal {
         opacity: 0;
@@ -1313,7 +1353,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="hero-text">
         <div class="hero-kicker">
             <span class="pulse"></span>
-            <span>📍 Votuporanga · SP · Aberto agora</span>
+            <span id="aberto">📍 Votuporanga · SP</span>
         </div>
         <h1>
             Suplementos<br>
@@ -1761,6 +1801,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </section>
 
 <!-- ============ FINAL CTA ============ -->
+<!-- ============ FAQ (visivel; o schema FAQPage repete este texto) ============ -->
+<section class="faqs" id="perguntas">
+    <div class="wrap reveal">
+        <div class="offers-stamp" style="background: var(--neon);">📍 NF Suplementos em Votuporanga</div>
+        <h2 class="sec-title" style="margin-top: 14px;">Perguntas<br><em>frequentes.</em></h2>
+        <div class="faq-list">
+            <details open><summary>Vocês entregam no mesmo dia em Votuporanga?<span>+</span></summary><p>Sim. Pedidos feitos até as 14h são entregues no mesmo dia em Votuporanga, com entrega grátis.</p></details>
+            <details><summary>Os suplementos são originais?<span>+</span></summary><p>Sim. Todos os produtos são originais e lacrados, comprados das marcas oficiais ou de distribuidores autorizados.</p></details>
+            <details><summary>Como faço o pedido?<span>+</span></summary><p>Pelo WhatsApp (17) 99758-7526. A Fernanda te atende, mostra o que tem a pronta entrega, combina a entrega e você paga por Pix, link de pagamento ou na entrega.</p></details>
+            <details><summary>Quais as formas de pagamento?<span>+</span></summary><p>Pix, link de pagamento (cartão) ou pagamento na entrega.</p></details>
+            <details><summary>Qual o horário de atendimento?<span>+</span></summary><p>Segunda a sexta, das 9h às 18h, e sábado, das 9h às 12h.</p></details>
+            <details><summary>Vocês têm loja física?<span>+</span></summary><p>A NF Suplementos atende online em Votuporanga-SP e entrega na sua casa. O endereço do estoque é passado pelo WhatsApp se você preferir retirar.</p></details>
+            <details><summary>Quais marcas vocês trabalham?<span>+</span></summary><p>Byopure, Dux Nutrition, Integralmédica, Max Titanium, Black Skull, Probiótica, Nyer, Nutra Gold, ISN, Darkness, Dowmith e outras. O catálogo completo com preços fica em nfsuplementosvotu.com.br/catalogo.</p></details>
+            <details><summary>Vocês entregam em outras cidades da região?<span>+</span></summary><p>A entrega grátis no mesmo dia é para Votuporanga. Para outras cidades da região, chame no WhatsApp e consulte.</p></details>
+        </div>
+        <p class="faq-more">Quer entender melhor o que tomar? Leia o <a href="/blog/">blog da NF Suplementos</a> ou veja o <a href="/catalogo/">catálogo com preços</a>.</p>
+    </div>
+</section>
+
 <section class="final">
     <div class="wrap final-inner reveal">
         <div class="final-eyebrow">
@@ -1790,9 +1849,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="logo-text" style="text-align: left;">NF<small>SUPLEMENTOS</small></div>
     </div>
     <div class="foot-info">
-        Votuporanga — SP<br>
-        WhatsApp <a href="https://wa.me/5517997587526">(17) 99758-7526</a>
+        NF Suplementos · Votuporanga-SP<br>
+        WhatsApp <a href="https://wa.me/5517997587526">(17) 99758-7526</a><br>
+        Seg a sex 9h às 18h · Sáb 9h às 12h
     </div>
+    <nav class="foot-links" aria-label="Páginas">
+        <a href="/catalogo/">Catálogo e preços</a>
+        <a href="/blog/">Blog</a>
+        <a href="#perguntas">Perguntas frequentes</a>
+    </nav>
     <div class="foot-socials">
         <a href="https://www.instagram.com/_nfsuplementos" target="_blank" rel="noopener" class="foot-social" aria-label="Instagram">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
@@ -1896,6 +1961,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         var t = function () { var r = fim - Date.now(); if (r <= 0) { c.style.display = 'none'; return; }
             b.textContent = Math.floor(r / 864e5) + 'd ' + p(Math.floor(r / 36e5) % 24) + 'h ' + p(Math.floor(r / 6e4) % 60) + 'm ' + p(Math.floor(r / 1e3) % 60) + 's'; };
         t(); setInterval(t, 1000);
+    })();
+
+    // "Aberto agora" de verdade: horario de Sao Paulo (seg-sex 9-18, sab 9-12)
+    (function () {
+        var el = document.getElementById('aberto'); if (!el) return;
+        try {
+            var p = new Intl.DateTimeFormat('en-US', { timeZone: 'America/Sao_Paulo', weekday: 'short', hour: 'numeric', hour12: false }).formatToParts(new Date());
+            var d = p.find(function (x) { return x.type === 'weekday'; }).value, hr = parseInt(p.find(function (x) { return x.type === 'hour'; }).value, 10) % 24;
+            var aberto = (d !== 'Sun' && d !== 'Sat' && hr >= 9 && hr < 18) || (d === 'Sat' && hr >= 9 && hr < 12);
+            el.textContent = '📍 Votuporanga · SP · ' + (aberto ? 'Aberto agora' : 'Peça pelo WhatsApp');
+        } catch (e) {}
     })();
 </script>
 
