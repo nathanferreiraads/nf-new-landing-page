@@ -186,6 +186,9 @@
     } catch (e) {}
   }, true);
   if (D.readyState === "loading") D.addEventListener("DOMContentLoaded", decorarTudo); else decorarTudo();
+  // ViewContent no CATALOGO (09/10/2026, pedido do Nathan): o catalogo e uma pagina so, sem pagina de produto, entao o
+  // ViewContent e "viu o catalogo", uma vez por visita, com o mesmo id no pixel (tag padrao do GTM) e no servidor.
+  if (pg === "catalogo") evento("ViewContent", "view_item_list", { content_name: "Catálogo NF Suplementos", content_type: "product_group" });
 
   // para a bio e para o teste
   W.NF = { vid: vid, pagina: pg, origem: origemValida, evento: evento, embutir: embutir, decorar: decorar, versao: "2026-10-09" };
