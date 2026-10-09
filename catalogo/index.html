@@ -185,7 +185,82 @@ a{color:inherit;text-decoration:none}
 .fade-up{opacity:0;transform:translateY(24px);transition:opacity .5s ease,transform .5s ease}
 .fade-up.visible{opacity:1;transform:translateY(0)}
 
-@media(max-width:360px){.prod-card-name{font-size:13px;min-height:26px}.prod-price-value{font-size:20px}}
+@media(max-width:360px){.prod-card-name{font-size:13px;min-height:26px}.prod-price-value{font-size:20px}.lh-name{font-size:34px}.lh-new{font-size:50px}}
+/* ===== OUTUBRO 2026: lancamento, contagem, busca, toque ===== */
+.cat-nav a.nav-launch{background:linear-gradient(135deg,#d4af37,#f5d77a);color:#1a1405;border-color:#d4af37;animation:navglow 2.4s ease-in-out infinite}
+.cat-nav a.nav-busca{background:#fff;color:#111;border-color:#fff}
+@keyframes navglow{0%,100%{box-shadow:0 0 0 rgba(212,175,55,0)}50%{box-shadow:0 0 14px rgba(212,175,55,.65)}}
+.trust-row{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:12px}
+.trust-row span{font-size:10px;font-weight:700;color:#d1d5db;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:6px 10px;border-radius:50px}
+.search-wrap{max-width:720px;margin:6px auto 0;padding:0 16px;scroll-margin-top:110px}
+.search-box{display:flex;align-items:center;gap:8px;background:#161616;border:1.5px solid rgba(255,255,255,.14);border-radius:14px;padding:0 12px;transition:border-color .2s,box-shadow .2s}
+.search-box:focus-within{border-color:var(--green);box-shadow:0 0 0 4px rgba(74,222,32,.15)}
+.search-box svg{width:18px;height:18px;color:var(--text-gray);flex-shrink:0}
+.search-box input{flex:1;background:none;border:0;outline:0;color:#fff;font:600 16px 'Montserrat',sans-serif;padding:13px 0;min-width:0}
+.search-box input::-webkit-search-cancel-button{display:none}
+.search-box input::placeholder{color:#6b7280;font-weight:500}
+.search-box button{background:rgba(255,255,255,.1);border:0;color:#fff;width:28px;height:28px;border-radius:50%;font-size:12px;cursor:pointer}
+.search-chips{display:flex;gap:6px;overflow-x:auto;padding:10px 0 2px;scrollbar-width:none}
+.search-chips::-webkit-scrollbar{display:none}
+.search-chips button{flex-shrink:0;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);color:#d1d5db;font:700 11px 'Montserrat',sans-serif;padding:7px 13px;border-radius:50px;cursor:pointer;transition:all .2s}
+.search-chips button.on{background:var(--green);color:#111;border-color:var(--green)}
+.search-info{font-size:11px;font-weight:700;color:var(--text-gray);margin-top:8px;text-align:center}
+.search-empty{display:block;margin-top:12px;text-align:center;font-size:12px;color:#fff;background:rgba(74,222,32,.08);border:1px dashed rgba(74,222,32,.4);border-radius:12px;padding:14px}
+.search-empty b{color:var(--green)}
+.is-hidden{display:none!important}
+.search-empty[hidden],.search-info[hidden],.search-box button[hidden]{display:none}
+
+.countdown{display:inline-flex;align-items:center;gap:6px;margin-top:12px;background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.35);border-radius:12px;padding:7px 10px}
+.cd-label{font-size:10px;font-weight:800;color:#fca5a5;letter-spacing:.5px;text-transform:uppercase;margin-right:2px}
+.cd-box{display:flex;flex-direction:column;align-items:center;background:#0a0a0a;border-radius:7px;padding:3px 6px;min-width:36px}
+.cd-box b{font-family:'Bebas Neue',sans-serif;font-size:20px;line-height:1;color:#fff}
+.cd-box small{font-size:7px;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:.5px}
+
+.launch-hero{display:grid;grid-template-columns:1fr;position:relative;overflow:hidden;border-radius:20px;margin-bottom:14px;color:#fff;
+background:radial-gradient(120% 80% at 50% 0%,rgba(212,175,55,.28),transparent 60%),linear-gradient(165deg,#1d1709 0%,#0e0d0a 55%,#0a0a0a 100%);
+border:2px solid #d4af37;box-shadow:0 0 0 1px rgba(212,175,55,.25),0 10px 40px -10px rgba(212,175,55,.55);animation:goldpulse 3s ease-in-out infinite;scroll-margin-top:110px;-webkit-tap-highlight-color:transparent}
+.launch-hero::after{content:'';position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,240,190,.18),transparent);transform:skewX(-20deg);animation:shine 3.6s ease-in-out infinite;pointer-events:none}
+@keyframes shine{0%{left:-60%}55%,100%{left:130%}}
+@keyframes goldpulse{0%,100%{box-shadow:0 0 0 1px rgba(212,175,55,.25),0 10px 40px -12px rgba(212,175,55,.45)}50%{box-shadow:0 0 0 1px rgba(212,175,55,.6),0 10px 50px -6px rgba(212,175,55,.7)}}
+.lh-ribbon{position:absolute;top:12px;left:12px;z-index:3;background:linear-gradient(135deg,#d4af37,#f7e08f);color:#1a1405;font-size:10px;font-weight:900;letter-spacing:1.2px;padding:6px 11px;border-radius:7px;box-shadow:0 4px 14px rgba(212,175,55,.5)}
+.lh-off{position:absolute;top:12px;right:12px;z-index:3;width:54px;height:54px;border-radius:50%;background:#ef4444;color:#fff;font-family:'Bebas Neue',sans-serif;font-size:22px;display:flex;align-items:center;justify-content:center;transform:rotate(12deg);box-shadow:0 4px 16px rgba(239,68,68,.55);animation:pop 1.8s ease-in-out infinite}
+@keyframes pop{0%,100%{transform:rotate(12deg) scale(1)}50%{transform:rotate(12deg) scale(1.1)}}
+.lh-img-wrap{display:flex;align-items:center;justify-content:center;padding:44px 20px 6px}
+.lh-img{width:auto;max-width:72%;max-height:300px;border-radius:14px;filter:drop-shadow(0 18px 30px rgba(0,0,0,.6));animation:floaty 4s ease-in-out infinite}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.lh-body{padding:8px 18px 18px;text-align:center}
+.lh-brand{color:#e9c96a!important;font-size:10px!important;letter-spacing:3px!important}
+.lh-name{font-family:'Bebas Neue',sans-serif;font-size:40px;line-height:.95;letter-spacing:1px;margin:4px 0 6px;color:#fff}
+.lh-name span{display:block;background:linear-gradient(90deg,#d4af37,#fff1b8,#d4af37);-webkit-background-clip:text;background-clip:text;color:transparent;background-size:200% 100%;animation:goldtext 4s linear infinite}
+@keyframes goldtext{to{background-position:200% 0}}
+.lh-desc{font-size:11px;font-weight:600;color:rgba(255,255,255,.65);line-height:1.4;margin-bottom:10px}
+.lh-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:5px;margin-bottom:14px}
+.lh-chips span{font-size:9px;font-weight:800;color:#f3e2a5;background:rgba(212,175,55,.12);border:1px solid rgba(212,175,55,.35);padding:5px 9px;border-radius:50px}
+.lh-price-row{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:14px}
+.lh-old{display:block;font-size:13px;font-weight:600;color:rgba(255,255,255,.4);text-decoration:line-through;text-align:left}
+.lh-new{font-family:'Bebas Neue',sans-serif;font-size:58px;line-height:.9;color:#fff;text-shadow:0 0 24px rgba(212,175,55,.45)}
+.lh-new small{font-family:'Montserrat',sans-serif;font-size:14px;font-weight:800;vertical-align:top;margin-right:3px;color:#e9c96a}
+.lh-new i{font-style:normal;font-size:28px;vertical-align:top}
+.lh-save{background:#4ade20;color:#0a0a0a;font-size:10px;font-weight:700;line-height:1.15;padding:8px 10px;border-radius:10px;text-transform:uppercase}
+.lh-save b{font-family:'Bebas Neue',sans-serif;font-size:20px;font-weight:400}
+.lh-cta{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;background:linear-gradient(135deg,#25D366,#1ebe5a);color:#fff;font-weight:900;font-size:14px;letter-spacing:.6px;padding:15px 16px;border-radius:13px;box-shadow:0 6px 20px rgba(37,211,102,.4);transition:transform .2s}
+.lh-cta svg{width:20px;height:20px}
+.launch-hero:active .lh-cta{transform:scale(.97)}
+.lh-foot{font-size:9px;color:rgba(255,255,255,.4);margin-top:8px}
+@media(min-width:700px){.launch-hero{grid-template-columns:1fr 1.1fr;align-items:center}.lh-img-wrap{padding:30px}.lh-img{max-width:90%;max-height:380px}.lh-body{text-align:left;padding:30px 30px 30px 0}.lh-chips,.lh-price-row{justify-content:flex-start}.lh-name{font-size:56px}}
+
+.prod-card.is-launch{border:1.5px solid #d4af37;box-shadow:0 0 0 1px rgba(212,175,55,.3),0 0 22px -4px rgba(212,175,55,.5);animation:goldpulse 3s ease-in-out infinite}
+.prod-card.is-launch .prod-card-brand{color:#e9c96a}
+.prod-tag.tag-gold{background:linear-gradient(135deg,#d4af37,#f7e08f);color:#1a1405}
+.prod-tag.tag-auto{background:#ef4444}
+.combo-launch{border-color:#d4af37!important;background:radial-gradient(100% 70% at 50% 0%,rgba(212,175,55,.2),transparent 65%),var(--card-dark)!important}
+.combo-launch .combo-badge{background:rgba(212,175,55,.15);color:#f3d36b;border-color:rgba(212,175,55,.45)}
+.combo-save{display:inline-block;margin-top:8px;font-size:10px;font-weight:800;color:#0a0a0a;background:var(--green);padding:4px 10px;border-radius:50px;text-transform:uppercase;letter-spacing:.4px}
+
+.prod-card,.agosto-combo{-webkit-tap-highlight-color:transparent}
+.prod-card:active{transform:scale(.97)}
+.combo-cta:active,.cta-btn:active,.mid-cta-btn:active{transform:scale(.96)}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
@@ -199,7 +274,9 @@ a{color:inherit;text-decoration:none}
 </div></header>
 
 <nav class="cat-nav"><div class="cat-nav-inner">
-<a href="#agosto" class="nav-agosto">🔥 OFERTAS DE AGOSTO</a>
+<a href="#busca" class="nav-busca" aria-label="Buscar produto">🔍 Buscar</a>
+<a href="#outubro" class="nav-agosto">🔥 OFERTAS DE OUTUBRO</a>
+<a href="#lancamento" class="nav-launch">⭐ LANÇAMENTO</a>
 <a href="#nyer" class="nav-nyer">🚀 NYER</a>
 <a href="#byopure" class="nav-byo">💎 BYOPURE</a>
 <a href="#proteinas">Proteínas</a>
@@ -227,30 +304,56 @@ a{color:inherit;text-decoration:none}
 </div>
 </div>
 <div class="cover-tag">🔥 Pronta Entrega · Votuporanga/SP</div>
+<div class="trust-row"><span>🚚 Entrega grátis em Votuporanga</span><span>⏰ Pedido até 14h chega hoje</span><span>💳 Pix, link ou na entrega</span></div>
 </div>
 
-<!-- ============ OFERTAS DE AGOSTO ============ -->
-<section class="section acc-amber" id="agosto">
+<div class="search-wrap" id="busca">
+<div class="search-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+<input type="search" id="busca-input" placeholder="Buscar: whey, creatina, byopure..." autocomplete="off" enterkeyhint="search" aria-label="Buscar produto">
+<button type="button" id="busca-limpar" aria-label="Limpar busca" hidden>✕</button></div>
+<div class="search-chips"><button type="button" data-q="whey">Whey</button><button type="button" data-q="creatina">Creatina</button><button type="button" data-q="byopure">Byopure</button><button type="button" data-q="pré">Pré-treino</button><button type="button" data-q="termog">Termogênico</button><button type="button" data-q="vitamina">Vitaminas</button></div>
+<div class="search-info" id="busca-info" hidden></div>
+<a class="search-empty" id="busca-vazio" hidden href="https://wa.me/5517997587526?text=Ol%C3%A1%21%20Vim%20pelo%20cat%C3%A1logo%20e%20n%C3%A3o%20achei%20o%20produto%20que%20procuro.%20Voc%C3%AAs%20t%C3%AAm%3F" target="_blank">🤔 Não achou? <b>Pergunta no WhatsApp</b>, a gente confere o estoque pra você.</a>
+</div>
+
+<!-- ============ OFERTAS DE OUTUBRO ============ -->
+<section class="section acc-amber" id="outubro">
 <div class="section-header fade-up">
 <div class="section-badge badge-amber">🔥 Oferta do Mês</div>
-<h2 class="section-title title-amber"><em>OFERTAS</em> DE AGOSTO</h2>
+<h2 class="section-title title-amber"><em>OFERTAS</em> DE OUTUBRO</h2>
 <p class="section-sub">Enquanto durar o estoque</p>
+<div class="countdown" data-fim="2026-10-31T23:59:59-03:00" aria-live="polite"><span class="cd-label">⏳ Acaba em</span><span class="cd-box"><b data-cd="d">--</b><small>dias</small></span><span class="cd-box"><b data-cd="h">--</b><small>horas</small></span><span class="cd-box"><b data-cd="m">--</b><small>min</small></span><span class="cd-box"><b data-cd="s">--</b><small>seg</small></span></div>
 </div>
 
+<a href="https://wa.me/5517997587526?text=Ol%C3%A1%21%20Quero%20o%20Whey%20World%20Collection%20Byopure%20900g%20%28lan%C3%A7amento%29%20por%20R%24%20179%2C90%20%28Oferta%20de%20Outubro%29%21" class="launch-hero fade-up" id="lancamento" target="_blank" data-produto="Byopure · WHEY WORLD COLLECTION 900G">
+<span class="lh-ribbon">🚀 LANÇAMENTO</span>
+<span class="lh-off">-10%</span>
+<div class="lh-img-wrap"><img src="mockups/whey-world-collection-byopure.jpg" alt="Whey World Collection Byopure 900g" class="lh-img" loading="eager"></div>
+<div class="lh-body">
+<div class="prod-card-brand lh-brand">Byopure · Advanced Nutrition</div>
+<div class="prod-card-name lh-name">WHEY <span>WORLD COLLECTION</span></div>
+<div class="lh-desc">Pote 900g · Vários sabores · A linha premium da marca mais vendida da loja</div>
+<div class="lh-chips"><span>🏆 Premium</span><span>😋 Vários sabores</span><span>🚚 Entrega hoje*</span></div>
+<div class="lh-price-row"><div><span class="lh-old">De R$ 199,90</span><div class="lh-new"><small>R$</small>179<i>,90</i></div></div><span class="lh-save">Economize<br><b>R$ 20,00</b></span></div>
+<span class="lh-cta"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>QUERO O LANÇAMENTO</span>
+<div class="lh-foot">*Votuporanga, pedido até as 14h</div>
+</div>
+</a>
+
 <div class="prod-grid">
-<a href="https://wa.me/5517997587526?text=Ol%C3%A1%21%20Quero%20o%20Whey%20Crazyness%201kg%20por%20R%24%20105%2C00%20%28Oferta%20de%20Agosto%29%21" class="prod-card is-byo fade-up" target="_blank">
-<span class="prod-tag tag-amber">AGOSTO</span>
+<a href="https://wa.me/5517997587526?text=Ol%C3%A1%21%20Quero%20o%20Whey%20Crazyness%201kg%20por%20R%24%20109%2C90%20%28Oferta%20de%20Outubro%29%21" class="prod-card is-byo fade-up" target="_blank">
+<span class="prod-tag tag-amber">OUTUBRO</span>
 <img src="mockups/whey-crazyness-1kg.png" alt="Whey Crazyness 1kg" class="prod-card-img" loading="lazy">
 <div class="prod-card-inner">
 <div class="prod-card-brand">Byopure</div>
 <div class="prod-card-name">CRAZYNESS WHEY 1KG</div>
 <div class="prod-card-desc">Whey Concentrado · 1KG</div>
-<div class="prod-price-box"><span class="prod-price-old">R$ 109,00</span>
-<div class="prod-price-new"><span class="prod-price-rs">R$</span><span class="prod-price-value">105</span><span class="prod-price-cents">,00</span></div><span class="prod-wa-btn" aria-label="Pedir no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span class="prod-wa-text">Pedir esse</span></span>
+<div class="prod-price-box"><span class="prod-price-old">R$ 129,90</span>
+<div class="prod-price-new"><span class="prod-price-rs">R$</span><span class="prod-price-value">109</span><span class="prod-price-cents">,90</span></div><span class="prod-wa-btn" aria-label="Pedir no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span class="prod-wa-text">Pedir esse</span></span>
 </div></div></a>
 
-<a href="https://wa.me/5517997587526?text=Ol%C3%A1%21%20Quero%20a%20Creatina%20Nyer%20300g%20por%20R%24%2049%2C90%20%28Oferta%20de%20Agosto%29%21" class="prod-card is-nyer fade-up" target="_blank">
-<span class="prod-tag tag-amber">AGOSTO</span>
+<a href="https://wa.me/5517997587526?text=Ol%C3%A1%21%20Quero%20a%20Creatina%20Nyer%20300g%20por%20R%24%2049%2C90%20%28Oferta%20de%20Outubro%29%21" class="prod-card is-nyer fade-up" target="_blank">
+<span class="prod-tag tag-amber">OUTUBRO</span>
 <img src="nyer-creatina.jpg" alt="Creatina Pura Nyer 300g" class="prod-card-img" loading="lazy">
 <div class="prod-card-inner">
 <div class="prod-card-brand">Nyer Nutrition</div>
@@ -262,31 +365,44 @@ a{color:inherit;text-decoration:none}
 </div>
 
 <div class="agosto-grid">
+<div class="agosto-combo combo-launch fade-up">
+<div class="combo-badge">⭐ Combo Especial · Lançamento</div>
+<div class="combo-title">WHEY WORLD COLLECTION + CREATINA</div>
+<div class="combo-items">
+<img src="mockups/whey-world-collection-byopure.jpg" alt="Whey World Collection Byopure" class="combo-item-img">
+<img src="nyer-creatina.jpg" alt="Creatina Nyer 300g" class="combo-item-img">
+</div>
+<div class="combo-desc">Whey Lançamento Byopure 900g + Creatina Pura Nyer 300g</div>
+<div class="combo-price-old">De R$ 259,80</div>
+<div class="combo-price-new"><span class="combo-price-rs">R$</span><span class="combo-price-value">229</span><span class="combo-price-cents">,80</span></div>
+<br>
+<a href="https://wa.me/5517997587526?text=Ol%C3%A1%21%20Quero%20o%20COMBO%20Whey%20World%20Collection%20Byopure%20%2B%20Creatina%20Nyer%20300g%20por%20R%24%20229%2C80%21" class="combo-cta" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.917.918l4.462-1.494A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.38 0-4.593-.697-6.454-1.896l-.446-.293-2.65.887.886-2.646-.303-.453A9.958 9.958 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>QUERO O COMBO!</a>
+</div>
 <div class="agosto-combo fade-up">
-<div class="combo-badge">🔥 Combo de Agosto</div>
+<div class="combo-badge">🔥 Combo de Outubro</div>
 <div class="combo-title">2X WHEY CRAZYNESS · 2KG</div>
 <div class="combo-items">
 <img src="mockups/whey-crazyness-1kg.png" alt="Whey Crazyness 1kg" class="combo-item-img">
 <img src="mockups/whey-crazyness-1kg.png" alt="Whey Crazyness 1kg" class="combo-item-img">
 </div>
 <div class="combo-desc">2 unidades de Whey Crazyness 1kg · 2KG de whey no total</div>
-<div class="combo-price-old">De R$ 218,00</div>
+<div class="combo-price-old">De R$ 259,80</div>
 <div class="combo-price-new"><span class="combo-price-rs">R$</span><span class="combo-price-value">199</span><span class="combo-price-cents">,90</span></div>
 <br>
-<a href="https://wa.me/5517997587526?text=Ol%C3%A1%21%20Quero%20o%20COMBO%202x%20Whey%20Crazyness%201kg%20%282KG%29%20por%20R%24%20199%2C90%20%28Oferta%20de%20Agosto%29%21" class="combo-cta" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.917.918l4.462-1.494A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.38 0-4.593-.697-6.454-1.896l-.446-.293-2.65.887.886-2.646-.303-.453A9.958 9.958 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>QUERO 2KG DE WHEY!</a>
+<a href="https://wa.me/5517997587526?text=Ol%C3%A1%21%20Quero%20o%20COMBO%202x%20Whey%20Crazyness%201kg%20%282KG%29%20por%20R%24%20199%2C90%20%28Oferta%20de%20Outubro%29%21" class="combo-cta" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.917.918l4.462-1.494A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.38 0-4.593-.697-6.454-1.896l-.446-.293-2.65.887.886-2.646-.303-.453A9.958 9.958 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>QUERO 2KG DE WHEY!</a>
 </div>
 <div class="agosto-combo fade-up">
-<div class="combo-badge">🔥 Combo de Agosto</div>
+<div class="combo-badge">🔥 Combo de Outubro</div>
 <div class="combo-title">WHEY CRAZYNESS + CREATINA</div>
 <div class="combo-items">
 <img src="mockups/whey-crazyness-1kg.png" alt="Whey Crazyness 1kg" class="combo-item-img">
 <img src="nyer-creatina.jpg" alt="Creatina Nyer 300g" class="combo-item-img">
 </div>
 <div class="combo-desc">Whey Crazyness 1kg + Creatina Pura Nyer 300g</div>
-<div class="combo-price-old">De R$ 168,90</div>
+<div class="combo-price-old">De R$ 189,80</div>
 <div class="combo-price-new"><span class="combo-price-rs">R$</span><span class="combo-price-value">149</span><span class="combo-price-cents">,90</span></div>
 <br>
-<a href="https://wa.me/5517997587526?text=Ol%C3%A1%21%20Quero%20o%20COMBO%20Whey%20Crazyness%201kg%20%2B%20Creatina%20Nyer%20300g%20por%20R%24%20149%2C90%20%28Oferta%20de%20Agosto%29%21" class="combo-cta" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.917.918l4.462-1.494A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.38 0-4.593-.697-6.454-1.896l-.446-.293-2.65.887.886-2.646-.303-.453A9.958 9.958 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>QUERO O COMBO!</a>
+<a href="https://wa.me/5517997587526?text=Ol%C3%A1%21%20Quero%20o%20COMBO%20Whey%20Crazyness%201kg%20%2B%20Creatina%20Nyer%20300g%20por%20R%24%20149%2C90%20%28Oferta%20de%20Outubro%29%21" class="combo-cta" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.917.918l4.462-1.494A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.38 0-4.593-.697-6.454-1.896l-.446-.293-2.65.887.886-2.646-.303-.453A9.958 9.958 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>QUERO O COMBO!</a>
 </div>
 </div>
 </section>
@@ -300,6 +416,17 @@ a{color:inherit;text-decoration:none}
 </div>
 
 <div class="prod-grid">
+<a href="https://wa.me/5517997587526?text=Ol%C3%A1%21%20Quero%20o%20Whey%20World%20Collection%20Byopure%20900g%20por%20R%24%20179%2C90%21" class="prod-card is-byo is-launch fade-up" target="_blank">
+<span class="prod-tag tag-gold">⭐ LANÇAMENTO</span>
+<img src="mockups/whey-world-collection-byopure.jpg" alt="Whey World Collection Byopure 900g" class="prod-card-img" loading="lazy">
+<div class="prod-card-inner">
+<div class="prod-card-brand">Byopure</div>
+<div class="prod-card-name">WHEY WORLD COLLECTION 900G</div>
+<div class="prod-card-desc">Premium · Pote 900g</div>
+<div class="prod-price-box"><span class="prod-price-old">R$ 199,90</span>
+<div class="prod-price-new"><span class="prod-price-rs">R$</span><span class="prod-price-value">179</span><span class="prod-price-cents">,90</span></div><span class="prod-wa-btn" aria-label="Pedir no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span class="prod-wa-text">Pedir esse</span></span>
+</div></div></a>
+
 <a href="https://wa.me/5517997587526?text=Ol%C3%A1!%20Quero%20o%20ByoCoffe%20Byopure%20300g%20por%20R%24%20119%2C90!" class="prod-card is-byo fade-up" target="_blank">
 <span class="prod-tag tag-blue">-20%</span>
 <img src="mockups/byocoffe-byopure.png" alt="ByoCoffe Byopure 300g" class="prod-card-img" loading="lazy">
@@ -344,26 +471,6 @@ a{color:inherit;text-decoration:none}
 </div>
 
 <div class="prod-grid">
-<a href="https://wa.me/5517997587526?text=Ol%C3%A1!%20Quero%20o%20Whey%20100%25%20Nyer%20Pote%201kg%20por%20R%24%20159%2C90!" class="prod-card is-nyer fade-up" target="_blank">
-<img src="nyer-whey-pote.jpg" alt="Whey 100% Nyer Pote 1kg" class="prod-card-img" loading="lazy">
-<div class="prod-card-inner">
-<div class="prod-card-brand">Nyer Nutrition</div>
-<div class="prod-card-name">WHEY 100% POTE</div>
-<div class="prod-card-desc">1KG · 24g Proteína</div>
-<div class="prod-price-box"><span class="prod-price-old">R$ 169,90</span>
-<div class="prod-price-new"><span class="prod-price-rs">R$</span><span class="prod-price-value">159</span><span class="prod-price-cents">,90</span></div><span class="prod-wa-btn" aria-label="Pedir no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span class="prod-wa-text">Pedir esse</span></span>
-</div></div></a>
-
-<a href="https://wa.me/5517997587526?text=Ol%C3%A1!%20Quero%20o%20Whey%20100%25%20Nyer%20Refil%201kg%20por%20R%24%20159%2C90!" class="prod-card is-nyer fade-up" target="_blank">
-<img src="nyer-whey-refil.jpg" alt="Whey 100% Nyer Refil 1kg" class="prod-card-img" loading="lazy">
-<div class="prod-card-inner">
-<div class="prod-card-brand">Nyer Nutrition</div>
-<div class="prod-card-name">WHEY 100% REFIL</div>
-<div class="prod-card-desc">1KG · 21g Proteína</div>
-<div class="prod-price-box"><span class="prod-price-old">R$ 169,90</span>
-<div class="prod-price-new"><span class="prod-price-rs">R$</span><span class="prod-price-value">159</span><span class="prod-price-cents">,90</span></div><span class="prod-wa-btn" aria-label="Pedir no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span class="prod-wa-text">Pedir esse</span></span>
-</div></div></a>
-
 <a href="https://wa.me/5517997587526?text=Ol%C3%A1!%20Quero%20a%20Creatina%20Nyer%20300g%20por%20R%24%2059%2C90!" class="prod-card is-nyer fade-up" target="_blank">
 <img src="nyer-creatina.jpg" alt="Creatina 300g Nyer" class="prod-card-img" loading="lazy">
 <div class="prod-card-inner">
@@ -395,20 +502,6 @@ a{color:inherit;text-decoration:none}
 </div></div></a>
 </div>
 
-<div class="nyer-combo fade-up">
-<div class="combo-badge">🔥 Combo Especial</div>
-<div class="combo-title">WHEY + CREATINA + PRÉ TREINO</div>
-<div class="combo-items">
-<img src="nyer-whey-refil.jpg" alt="Whey Refil" class="combo-item-img">
-<img src="nyer-creatina.jpg" alt="Creatina" class="combo-item-img">
-<img src="nyer-darkpump.jpg" alt="Dark Pump" class="combo-item-img">
-</div>
-<div class="combo-desc">Whey 100% Refil 1kg + Creatina Pura 300g + Dark Pump 300g</div>
-<div class="combo-price-old">De R$ 329,70</div>
-<div class="combo-price-new"><span class="combo-price-rs">R$</span><span class="combo-price-value">249</span></div>
-<br>
-<a href="https://wa.me/5517997587526?text=Ol%C3%A1!%20Quero%20o%20COMBO%20NYER%20Whey%20%2B%20Creatina%20%2B%20Dark%20Pump%20por%20R%24249!" class="combo-cta" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.917.918l4.462-1.494A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.38 0-4.593-.697-6.454-1.896l-.446-.293-2.65.887.886-2.646-.303-.453A9.958 9.958 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>QUERO O COMBO!</a>
-</div>
 </section>
 
 <!-- ============ PROTEÍNAS / WHEY ============ -->
@@ -420,8 +513,19 @@ a{color:inherit;text-decoration:none}
 </div>
 
 <div class="prod-grid">
+<a href="https://wa.me/5517997587526?text=Ol%C3%A1%21%20Quero%20o%20Whey%20World%20Collection%20Byopure%20900g%20por%20R%24%20179%2C90%21" class="prod-card is-byo is-launch fade-up" target="_blank">
+<span class="prod-tag tag-gold">⭐ LANÇAMENTO</span>
+<img src="mockups/whey-world-collection-byopure.jpg" alt="Whey World Collection Byopure 900g" class="prod-card-img" loading="lazy">
+<div class="prod-card-inner">
+<div class="prod-card-brand">Byopure</div>
+<div class="prod-card-name">WHEY WORLD COLLECTION 900G</div>
+<div class="prod-card-desc">Premium · Pote 900g</div>
+<div class="prod-price-box"><span class="prod-price-old">R$ 199,90</span>
+<div class="prod-price-new"><span class="prod-price-rs">R$</span><span class="prod-price-value">179</span><span class="prod-price-cents">,90</span></div><span class="prod-wa-btn" aria-label="Pedir no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span class="prod-wa-text">Pedir esse</span></span>
+</div></div></a>
+
 <a href="https://wa.me/5517997587526?text=Ol%C3%A1!%20Quero%20o%20Whey%202W%20Byopure!" class="prod-card is-byo fade-up" target="_blank">
-<span class="prod-tag tag-amber">OFERTA AGOSTO</span>
+<span class="prod-tag tag-amber">OFERTA</span>
 <img src="mockups/whey-2w-byopure.png" alt="Whey 2W Byopure" class="prod-card-img" loading="lazy">
 <div class="prod-card-inner">
 <div class="prod-card-brand">Byopure</div>
@@ -429,6 +533,17 @@ a{color:inherit;text-decoration:none}
 <div class="prod-card-desc">Pote 900g · C/ Enzima Lactase p/ Intolerantes</div>
 <div class="prod-price-box"><span class="prod-price-old">R$ 229,90</span>
 <div class="prod-price-new"><span class="prod-price-rs">R$</span><span class="prod-price-value">199</span><span class="prod-price-cents">,90</span></div><span class="prod-wa-btn" aria-label="Pedir no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span class="prod-wa-text">Pedir esse</span></span>
+</div></div></a>
+
+<a href="https://wa.me/5517997587526?text=Ol%C3%A1!%20Quero%20o%20Byobeef%20Byopure!" class="prod-card is-byo fade-up" target="_blank">
+<span class="prod-tag tag-blue">💎 DESTAQUE</span>
+<img src="mockups/byobeef-byopure.png" alt="Byobeef Byopure" class="prod-card-img" loading="lazy">
+<div class="prod-card-inner">
+<div class="prod-card-brand">Byopure</div>
+<div class="prod-card-name">BYOBEEF</div>
+<div class="prod-card-desc">Pote 900g · Proteína Isolada da Carne</div>
+<div class="prod-price-box">
+<div class="prod-price-new"><span class="prod-price-rs">R$</span><span class="prod-price-value">189</span></div><span class="prod-wa-btn" aria-label="Pedir no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span class="prod-wa-text">Pedir esse</span></span>
 </div></div></a>
 
 <a href="https://wa.me/5517997587526?text=Ol%C3%A1!%20Quero%20o%20Whey%20Byohydro%20Byopure!" class="prod-card is-byo fade-up" target="_blank">
@@ -441,14 +556,14 @@ a{color:inherit;text-decoration:none}
 <div class="prod-price-new"><span class="prod-price-rs">R$</span><span class="prod-price-value">299</span><span class="prod-price-cents">,90</span></div><span class="prod-wa-btn" aria-label="Pedir no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span class="prod-wa-text">Pedir esse</span></span>
 </div></div></a>
 
-<a href="https://wa.me/5517997587526?text=Ol%C3%A1!%20Quero%20o%20Whey%20Crazyness%201kg!" class="prod-card is-byo fade-up" target="_blank">
+<a href="https://wa.me/5517997587526?text=Ol%C3%A1%21%20Quero%20o%20Whey%20Crazyness%201kg%20por%20R%24%20109%2C90%20%28Oferta%20de%20Outubro%29%21" class="prod-card is-byo fade-up" target="_blank">
 <img src="mockups/whey-crazyness-1kg.png" alt="Whey Crazyness Byopure 1kg" class="prod-card-img" loading="lazy">
 <div class="prod-card-inner">
 <div class="prod-card-brand">Byopure</div>
 <div class="prod-card-name">CRAZYNESS WHEY 1KG</div>
 <div class="prod-card-desc">Whey Concentrado · 1kg</div>
-<div class="prod-price-box">
-<div class="prod-price-new"><span class="prod-price-rs">R$</span><span class="prod-price-value">109</span></div><span class="prod-wa-btn" aria-label="Pedir no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span class="prod-wa-text">Pedir esse</span></span>
+<div class="prod-price-box"><span class="prod-price-old">R$ 129,90</span>
+<div class="prod-price-new"><span class="prod-price-rs">R$</span><span class="prod-price-value">109</span><span class="prod-price-cents">,90</span></div><span class="prod-wa-btn" aria-label="Pedir no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span class="prod-wa-text">Pedir esse</span></span>
 </div></div></a>
 
 <a href="https://wa.me/5517997587526?text=Ol%C3%A1!%20Quero%20o%20Whey%20Crazyness%201%2C8kg!" class="prod-card is-byo fade-up" target="_blank">
@@ -481,14 +596,14 @@ a{color:inherit;text-decoration:none}
 <div class="prod-price-new"><span class="prod-price-rs">R$</span><span class="prod-price-value">199</span></div><span class="prod-wa-btn" aria-label="Pedir no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span class="prod-wa-text">Pedir esse</span></span>
 </div></div></a>
 
-<a href="https://wa.me/5517997587526?text=Ol%C3%A1!%20Quero%20o%20Whey%20Dux%20900g!" class="prod-card fade-up" target="_blank">
+<a href="https://wa.me/5517997587526?text=Ol%C3%A1%21%20Quero%20o%20Whey%20Dux%20900g%20por%20R%24%20249%2C90%21" class="prod-card fade-up" target="_blank">
 <img src="mockups/whey-dux-900g.png" alt="Whey Dux 900g" class="prod-card-img" loading="lazy">
 <div class="prod-card-inner">
 <div class="prod-card-brand">Dux Nutrition</div>
 <div class="prod-card-name">WHEY DUX</div>
 <div class="prod-card-desc">Pote 900g · Concentrado</div>
 <div class="prod-price-box">
-<div class="prod-price-new"><span class="prod-price-rs">R$</span><span class="prod-price-value">209</span></div><span class="prod-wa-btn" aria-label="Pedir no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span class="prod-wa-text">Pedir esse</span></span>
+<div class="prod-price-new"><span class="prod-price-rs">R$</span><span class="prod-price-value">249</span><span class="prod-price-cents">,90</span></div><span class="prod-wa-btn" aria-label="Pedir no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span class="prod-wa-text">Pedir esse</span></span>
 </div></div></a>
 
 <a href="https://wa.me/5517997587526?text=Ol%C3%A1!%20Quero%20o%20Whey%20Probi%C3%B3tica!" class="prod-card fade-up" target="_blank">
@@ -521,24 +636,24 @@ a{color:inherit;text-decoration:none}
 <div class="prod-price-new"><span class="prod-price-rs">R$</span><span class="prod-price-value">165</span><span class="prod-price-cents">,90</span></div><span class="prod-wa-btn" aria-label="Pedir no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span class="prod-wa-text">Pedir esse</span></span>
 </div></div></a>
 
-<a href="https://wa.me/5517997587526?text=Ol%C3%A1!%20Quero%20o%20Whey%203W%20NutraGold!" class="prod-card fade-up" target="_blank">
+<a href="https://wa.me/5517997587526?text=Ol%C3%A1%21%20Quero%20o%20Whey%203W%20Nutra%20Gold%20900g%20por%20R%24%20179%2C90%21" class="prod-card fade-up" target="_blank">
 <img src="mockups/whey-nutragold.png" alt="Whey 3W Nutra Gold" class="prod-card-img" loading="lazy">
 <div class="prod-card-inner">
 <div class="prod-card-brand">Nutra Gold</div>
 <div class="prod-card-name">WHEY 3W NUTRA GOLD</div>
 <div class="prod-card-desc">Pacote 900g</div>
 <div class="prod-price-box">
-<div class="prod-price-new"><span class="prod-price-rs">R$</span><span class="prod-price-value">165</span><span class="prod-price-cents">,90</span></div><span class="prod-wa-btn" aria-label="Pedir no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span class="prod-wa-text">Pedir esse</span></span>
+<div class="prod-price-new"><span class="prod-price-rs">R$</span><span class="prod-price-value">179</span><span class="prod-price-cents">,90</span></div><span class="prod-wa-btn" aria-label="Pedir no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span class="prod-wa-text">Pedir esse</span></span>
 </div></div></a>
 
-<a href="https://wa.me/5517997587526?text=Ol%C3%A1!%20Quero%20o%20Whey%203W%20Grego%20Zero%20Lactose%20NutraGold!" class="prod-card fade-up" target="_blank">
+<a href="https://wa.me/5517997587526?text=Ol%C3%A1%21%20Quero%20o%20Whey%203W%20Grego%20Zero%20Lactose%20900g%20por%20R%24%20219%2C90%21" class="prod-card fade-up" target="_blank">
 <img src="mockups/whey-zero-lactose-nutragold.png" alt="Whey 3W Grego Zero Lactose" class="prod-card-img" loading="lazy">
 <div class="prod-card-inner">
 <div class="prod-card-brand">Nutra Gold</div>
 <div class="prod-card-name">WHEY 3W GREGO</div>
 <div class="prod-card-desc">Pote 900g · Zero Lactose</div>
 <div class="prod-price-box">
-<div class="prod-price-new"><span class="prod-price-rs">R$</span><span class="prod-price-value">189</span><span class="prod-price-cents">,90</span></div><span class="prod-wa-btn" aria-label="Pedir no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span class="prod-wa-text">Pedir esse</span></span>
+<div class="prod-price-new"><span class="prod-price-rs">R$</span><span class="prod-price-value">219</span><span class="prod-price-cents">,90</span></div><span class="prod-wa-btn" aria-label="Pedir no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span class="prod-wa-text">Pedir esse</span></span>
 </div></div></a>
 
 <a href="https://wa.me/5517997587526?text=Ol%C3%A1!%20Quero%20o%20Whey%20Dowmith!" class="prod-card fade-up" target="_blank">
@@ -561,15 +676,6 @@ a{color:inherit;text-decoration:none}
 <div class="prod-price-new"><span class="prod-price-rs">R$</span><span class="prod-price-value">179</span></div><span class="prod-wa-btn" aria-label="Pedir no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span class="prod-wa-text">Pedir esse</span></span>
 </div></div></a>
 
-<a href="https://wa.me/5517997587526?text=Ol%C3%A1!%20Quero%20o%20Byobeef%20Byopure!" class="prod-card is-byo fade-up" target="_blank">
-<img src="mockups/byobeef-byopure.png" alt="Byobeef Byopure" class="prod-card-img" loading="lazy">
-<div class="prod-card-inner">
-<div class="prod-card-brand">Byopure</div>
-<div class="prod-card-name">BYOBEEF</div>
-<div class="prod-card-desc">Pote 900g · Proteína Isolada da Carne</div>
-<div class="prod-price-box">
-<div class="prod-price-new"><span class="prod-price-rs">R$</span><span class="prod-price-value">189</span></div><span class="prod-wa-btn" aria-label="Pedir no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span class="prod-wa-text">Pedir esse</span></span>
-</div></div></a>
 </div>
 </section>
 
@@ -665,36 +771,6 @@ a{color:inherit;text-decoration:none}
 <div class="prod-price-new"><span class="prod-price-rs">R$</span><span class="prod-price-value">80</span></div><span class="prod-wa-btn" aria-label="Pedir no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span class="prod-wa-text">Pedir esse</span></span>
 </div></div></a>
 
-<a href="https://wa.me/5517997587526?text=Ol%C3%A1!%20Quero%20a%20Creatina%20300g%20Integralm%C3%A9dica!" class="prod-card fade-up" target="_blank">
-<img src="mockups/creatina-300g-integralmedica.png" alt="Creatina 300g Integralmédica" class="prod-card-img" loading="lazy">
-<div class="prod-card-inner">
-<div class="prod-card-brand">Integralmédica</div>
-<div class="prod-card-name">CREATINA PURA 300G</div>
-<div class="prod-card-desc">Monohidratada · 300g</div>
-<div class="prod-price-box">
-<div class="prod-price-new"><span class="prod-price-rs">R$</span><span class="prod-price-value">89</span></div><span class="prod-wa-btn" aria-label="Pedir no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span class="prod-wa-text">Pedir esse</span></span>
-</div></div></a>
-
-<a href="https://wa.me/5517997587526?text=Ol%C3%A1!%20Quero%20a%20Creatina%20300g%20Atlhetica!" class="prod-card fade-up" target="_blank">
-<img src="mockups/creatina-300g-atlhetica.png" alt="Creatina 300g Atlhetica" class="prod-card-img" loading="lazy">
-<div class="prod-card-inner">
-<div class="prod-card-brand">Atlhetica</div>
-<div class="prod-card-name">CREATINA PURA 300G</div>
-<div class="prod-card-desc">Monohidratada · 300g</div>
-<div class="prod-price-box">
-<div class="prod-price-new"><span class="prod-price-rs">R$</span><span class="prod-price-value">80</span></div><span class="prod-wa-btn" aria-label="Pedir no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span class="prod-wa-text">Pedir esse</span></span>
-</div></div></a>
-
-<a href="https://wa.me/5517997587526?text=Ol%C3%A1!%20Quero%20a%20Creatina%20em%20Goma!" class="prod-card fade-up" target="_blank">
-<img src="mockups/creatina-em-goma.png" alt="Creatina em Goma" class="prod-card-img" loading="lazy">
-<div class="prod-card-inner">
-<div class="prod-card-brand">SS Nutrition</div>
-<div class="prod-card-name">CREATINA EM GOMA</div>
-<div class="prod-card-desc">30 Gomas · Prática</div>
-<div class="prod-price-box">
-<div class="prod-price-new"><span class="prod-price-rs">R$</span><span class="prod-price-value">99</span></div><span class="prod-wa-btn" aria-label="Pedir no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span class="prod-wa-text">Pedir esse</span></span>
-</div></div></a>
-
 <a href="https://wa.me/5517997587526?text=Ol%C3%A1!%20Quero%20a%20Kreas%20300g%20por%20R%24%2049%2C90!" class="prod-card fade-up" target="_blank">
 <span class="prod-tag">OFERTA</span>
 <img src="mockups/kreas-300g.png" alt="Creatina Kreas ISN 300g" class="prod-card-img" loading="lazy">
@@ -777,17 +853,6 @@ a{color:inherit;text-decoration:none}
 <div class="prod-price-new"><span class="prod-price-rs">R$</span><span class="prod-price-value">65</span></div><span class="prod-wa-btn" aria-label="Pedir no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span class="prod-wa-text">Pedir esse</span></span>
 </div></div></a>
 
-<a href="https://wa.me/5517997587526?text=Ol%C3%A1!%20Quero%20o%204HP%20Insane%20Pr%C3%A9-Treino%20por%20R%24%2069%2C90!" class="prod-card fade-up" target="_blank">
-<span class="prod-tag">OFERTA</span>
-<img src="mockups/4hp-insane-pre-treino.png" alt="4HP Insane Pré-Treino ISN" class="prod-card-img" loading="lazy">
-<div class="prod-card-inner">
-<div class="prod-card-brand">ISN Nutrition</div>
-<div class="prod-card-name">4HP INSANE 300G</div>
-<div class="prod-card-desc">Pré-Treino Energético</div>
-<div class="prod-price-box"><span class="prod-price-old">R$ 99,00</span>
-<div class="prod-price-new"><span class="prod-price-rs">R$</span><span class="prod-price-value">69</span><span class="prod-price-cents">,90</span></div><span class="prod-wa-btn" aria-label="Pedir no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span class="prod-wa-text">Pedir esse</span></span>
-</div></div></a>
-
 <a href="https://wa.me/5517997587526?text=Ol%C3%A1!%20Quero%20o%20Blast%20Day%20Pr%C3%A9-Treino!" class="prod-card fade-up" target="_blank">
 <img src="mockups/blast-day-pre-treino.png" alt="Blast Day Pré-Treino" class="prod-card-img" loading="lazy">
 <div class="prod-card-inner">
@@ -818,15 +883,6 @@ a{color:inherit;text-decoration:none}
 <div class="prod-price-new"><span class="prod-price-rs">R$</span><span class="prod-price-value">119</span><span class="prod-price-cents">,90</span></div><span class="prod-wa-btn" aria-label="Pedir no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span class="prod-wa-text">Pedir esse</span></span>
 </div></div></a>
 
-<a href="https://wa.me/5517997587526?text=Ol%C3%A1!%20Quero%20o%20ISN%20Pump%20Pr%C3%A9-Treino%20Mastig%C3%A1vel!" class="prod-card fade-up" target="_blank">
-<img src="mockups/isn-pump-pre-treino.png" alt="ISN Pump Pré-Treino" class="prod-card-img" loading="lazy">
-<div class="prod-card-inner">
-<div class="prod-card-brand">ISN Nutrition</div>
-<div class="prod-card-name">ISN PUMP 200G</div>
-<div class="prod-card-desc">Mastigável · Sem Cafeína</div>
-<div class="prod-price-box">
-<div class="prod-price-new"><span class="prod-price-rs">R$</span><span class="prod-price-value">99</span></div><span class="prod-wa-btn" aria-label="Pedir no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span class="prod-wa-text">Pedir esse</span></span>
-</div></div></a>
 </div>
 </section>
 
@@ -1494,6 +1550,46 @@ a{color:inherit;text-decoration:none}
 const fo=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('visible');fo.unobserve(el.target)}})},{threshold:.08,rootMargin:'0px 0px -30px 0px'});
 document.querySelectorAll('.fade-up').forEach(el=>fo.observe(el));
 const secs=document.querySelectorAll('section[id],div[id]');const navs=document.querySelectorAll('.cat-nav a');
-let tk=false;window.addEventListener('scroll',()=>{if(!tk){requestAnimationFrame(()=>{let c='';secs.forEach(s=>{if(pageYOffset>=s.offsetTop-120)c=s.id});navs.forEach(a=>{const h=a.getAttribute('href');if(h){const isA=h==='#'+c;if(!a.classList.contains('nav-nyer')&&!a.classList.contains('nav-byo'))a.classList.toggle('active',isA);if(isA)a.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'})}});tk=false});tk=true}},{passive:true});
+let tk=false;window.addEventListener('scroll',()=>{if(!tk){requestAnimationFrame(()=>{let c='';secs.forEach(s=>{if(pageYOffset>=s.offsetTop-120)c=s.id});navs.forEach(a=>{const h=a.getAttribute('href');if(h){const isA=h==='#'+c;if(!a.classList.contains('nav-nyer')&&!a.classList.contains('nav-byo')&&!a.classList.contains('nav-launch')&&!a.classList.contains('nav-busca'))a.classList.toggle('active',isA);if(isA)a.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'})}});tk=false});tk=true}},{passive:true});
+// ===== OUTUBRO 2026 =====
+(function(){
+  // contagem da oferta (horario de Sao Paulo)
+  var cd=document.querySelector('.countdown');
+  if(cd){var fim=new Date(cd.getAttribute('data-fim')).getTime();var el={};['d','h','m','s'].forEach(function(k){el[k]=cd.querySelector('[data-cd="'+k+'"]')});
+    var p=function(n){return n<10?'0'+n:''+n};
+    var tick=function(){var r=Math.max(0,fim-Date.now());if(!r){cd.classList.add('is-hidden');return}
+      el.d.textContent=Math.floor(r/864e5);el.h.textContent=p(Math.floor(r/36e5)%24);el.m.textContent=p(Math.floor(r/6e4)%60);el.s.textContent=p(Math.floor(r/1e3)%60)};
+    tick();setInterval(tick,1000)}
+  // selo de desconto automatico e "economize" nos combos
+  var num=function(t){var m=(t||'').replace(/\./g,'').match(/(\d+)(?:,(\d{1,2}))?/);return m?parseFloat(m[1]+'.'+(m[2]||'0')):0};
+  document.querySelectorAll('.prod-card').forEach(function(c){var o=c.querySelector('.prod-price-old');if(!o||c.querySelector('.prod-tag'))return;
+    var v=c.querySelector('.prod-price-value'),ct=c.querySelector('.prod-price-cents');var de=num(o.textContent),por=num(v.textContent+(ct?ct.textContent:''));
+    if(de>por&&por>0){var t=document.createElement('span');t.className='prod-tag tag-auto';t.textContent='-'+Math.round((1-por/de)*100)+'%';c.insertBefore(t,c.firstChild)}});
+  document.querySelectorAll('.agosto-combo').forEach(function(c){var o=c.querySelector('.combo-price-old'),v=c.querySelector('.combo-price-value'),ct=c.querySelector('.combo-price-cents');if(!o||!v)return;
+    var e=num(o.textContent)-num(v.textContent+(ct?ct.textContent:''));if(e>0){var s=document.createElement('div');s.className='combo-save';s.textContent='Economize R$ '+e.toFixed(2).replace('.',',');c.querySelector('.combo-price-new').insertAdjacentElement('afterend',s)}});
+  // busca
+  var inp=document.getElementById('busca-input');if(!inp)return;
+  var info=document.getElementById('busca-info'),vazio=document.getElementById('busca-vazio'),limpar=document.getElementById('busca-limpar');
+  var norm=function(s){return (s||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase()};
+  var itens=[].slice.call(document.querySelectorAll('main .prod-card, main .agosto-combo, main .launch-hero'));
+  itens.forEach(function(i){var im=i.querySelector('img');i._t=norm(i.textContent+' '+(im?im.alt:''))});
+  var blocos=[].slice.call(document.querySelectorAll('main .section, main .mid-cta'));
+  var chips=[].slice.call(document.querySelectorAll('.search-chips button'));
+  var filtra=function(){var q=norm(inp.value.trim());limpar.hidden=!q;
+    chips.forEach(function(b){b.classList.toggle('on',q&&norm(b.getAttribute('data-q'))===q)});
+    if(!q){itens.forEach(function(i){i.classList.remove('is-hidden')});blocos.forEach(function(b){b.classList.remove('is-hidden')});info.hidden=true;vazio.hidden=true;return}
+    var ps=q.split(/\s+/),n=0;
+    itens.forEach(function(i){var ok=ps.every(function(p){return i._t.indexOf(p)>-1});i.classList.toggle('is-hidden',!ok);if(ok){n++;i.classList.add('visible')}});
+    blocos.forEach(function(b){if(b.classList.contains('mid-cta')){b.classList.add('is-hidden');return}
+      var tem=[].some.call(b.querySelectorAll('.prod-card,.agosto-combo,.launch-hero'),function(i){return !i.classList.contains('is-hidden')});b.classList.toggle('is-hidden',!tem)});
+    info.hidden=false;info.textContent=n?(n+(n>1?' produtos encontrados':' produto encontrado')):'';vazio.hidden=!!n};
+  var t;inp.addEventListener('input',function(){clearTimeout(t);t=setTimeout(filtra,120)});
+  inp.addEventListener('keydown',function(e){if(e.key==='Enter')inp.blur()});
+  limpar.addEventListener('click',function(){inp.value='';filtra();inp.focus()});
+  chips.forEach(function(b){b.addEventListener('click',function(){var q=b.getAttribute('data-q');inp.value=(b.classList.contains('on'))?'':q;filtra();
+    var w=document.getElementById('busca');window.scrollTo({top:w.getBoundingClientRect().top+pageYOffset-110,behavior:'smooth'})})});
+  var nb=document.querySelector('.nav-busca');if(nb)nb.addEventListener('click',function(e){e.preventDefault();var w=document.getElementById('busca');
+    window.scrollTo({top:w.getBoundingClientRect().top+pageYOffset-110,behavior:'smooth'});setTimeout(function(){inp.focus({preventScroll:true})},350)});
+})();
 </script>
 </body></html>
