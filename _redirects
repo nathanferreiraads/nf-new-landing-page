@@ -1,0 +1,2 @@
+# /go: link rastreavel criado no Painel NF (aba Links). A pagina mora no painel; aqui so redireciona.
+/go/*  https://nfsuplementos-painel.netlify.app/go/:splat  302

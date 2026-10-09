@@ -1,0 +1,36 @@
+plugins = []
+headers = []
+
+[functions]
+
+[functions."*"]
+
+[build]
+publish = "/Users/nathanferreira/Library/CloudStorage/OneDrive-Pessoal/Área de Trabalho/Tráfego Pago/Clientes/NF Suplementos/nf-new-landing-page"
+publishOrigin = "default"
+
+[build.environment]
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]
+
+[[redirects]]
+from = "/go/*"
+to = "https://nfsuplementos-painel.netlify.app/go/:splat"
+status = 302.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
