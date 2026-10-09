@@ -734,6 +734,60 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .offers-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
+    /* ===== Ofertas de Outubro 2026: lancamento e combos ===== */
+    .offers-cd { font-size: 12px; font-weight: 700; color: var(--light); background: rgba(255,107,26,.12); border: 1px solid rgba(255,107,26,.4); padding: 8px 12px; border-radius: 10px; }
+    .offers-cd b { color: var(--white); font-family: 'Space Grotesk', sans-serif; }
+    .offer-img img.fit { object-fit: contain; background: #fff; }
+    .offer-duo { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; gap: 4px; background: #fff; padding: 10px; }
+    .offer-duo img { width: 44% !important; height: auto !important; object-fit: contain; border-radius: 8px; }
+    .offer-duo span { font-family: 'Anton', sans-serif; font-size: 28px; color: var(--black); }
+    .offer-badge { background: var(--orange); }
+    .offer-old { font-size: 12px; color: var(--mute); text-decoration: line-through; margin-bottom: 2px; }
+    .offer-gold { border-color: #d4af37; box-shadow: 0 0 0 1px rgba(212,175,55,.25), 0 8px 30px -12px rgba(212,175,55,.6); }
+    .offer-gold .offer-badge { background: linear-gradient(135deg,#d4af37,#f7e08f); }
+    .launch { position: relative; display: grid; grid-template-columns: 1fr; overflow: hidden; margin-bottom: 14px; border-radius: 22px; border: 2px solid #d4af37; color: var(--white);
+        background: radial-gradient(120% 80% at 50% 0%, rgba(212,175,55,.28), transparent 60%), linear-gradient(165deg,#1d1709,#0e0d0a 55%,#0a0a0a);
+        box-shadow: 0 10px 40px -12px rgba(212,175,55,.55); animation: lgold 3s ease-in-out infinite; -webkit-tap-highlight-color: transparent; }
+    .launch::after { content: ''; position: absolute; top: 0; left: -60%; width: 40%; height: 100%; background: linear-gradient(100deg,transparent,rgba(255,240,190,.16),transparent); transform: skewX(-20deg); animation: lshine 3.6s ease-in-out infinite; pointer-events: none; }
+    @keyframes lshine { 0% { left: -60%; } 55%, 100% { left: 130%; } }
+    @keyframes lgold { 0%, 100% { box-shadow: 0 10px 40px -14px rgba(212,175,55,.45); } 50% { box-shadow: 0 10px 50px -6px rgba(212,175,55,.75); } }
+    .launch-tag { position: absolute; top: 14px; left: 14px; z-index: 2; background: linear-gradient(135deg,#d4af37,#f7e08f); color: #1a1405; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; padding: 6px 11px; border-radius: 8px; }
+    .launch-off { position: absolute; top: 12px; right: 12px; z-index: 2; width: 56px; height: 56px; border-radius: 50%; background: #ef4444; color: #fff; font-family: 'Anton', sans-serif; font-size: 20px; display: flex; align-items: center; justify-content: center; transform: rotate(12deg); }
+    .launch-img { display: flex; align-items: center; justify-content: center; padding: 52px 20px 4px; }
+    .launch-img img { max-width: 70%; max-height: 300px; border-radius: 14px; filter: drop-shadow(0 18px 30px rgba(0,0,0,.6)); animation: lfloat 4s ease-in-out infinite; }
+    @keyframes lfloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .launch-body { padding: 10px 20px 22px; text-align: center; }
+    .launch-brand { font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #e9c96a; }
+    .launch-name { font-family: 'Anton', sans-serif; font-size: 40px; line-height: 1; text-transform: uppercase; margin: 6px 0; }
+    .launch-name b { display: block; font-weight: 400; background: linear-gradient(90deg,#d4af37,#fff1b8,#d4af37); background-size: 200% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: ltext 4s linear infinite; }
+    @keyframes ltext { to { background-position: 200% 0; } }
+    .launch-desc { font-size: 13px; color: var(--light); margin-bottom: 14px; }
+    .launch-price { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 6px 14px; margin-bottom: 16px; }
+    .launch-old { width: 100%; font-size: 14px; color: var(--mute); text-decoration: line-through; }
+    .launch-new { font-family: 'Anton', sans-serif; font-size: 58px; line-height: .9; }
+    .launch-new small { font-size: 16px; color: #e9c96a; vertical-align: top; margin-right: 3px; }
+    .launch-new i { font-style: normal; font-size: 26px; vertical-align: top; }
+    .launch-save { background: var(--neon); color: var(--black); font-size: 12px; font-weight: 800; text-transform: uppercase; padding: 7px 11px; border-radius: 9px; }
+    .launch-cta { display: flex; align-items: center; justify-content: center; gap: 10px; background: var(--wa); color: #fff; font-size: 15px; font-weight: 800; text-transform: uppercase; padding: 16px; border-radius: 14px; box-shadow: 0 8px 22px rgba(37,211,102,.35); }
+    .launch-cta svg { width: 18px; height: 18px; }
+    .launch:active .launch-cta { transform: scale(.97); }
+    @media (min-width: 760px) {
+        .launch { grid-template-columns: 1fr 1.1fr; align-items: center; }
+        .launch-img { padding: 34px; } .launch-img img { max-width: 85%; max-height: 380px; }
+        .launch-body { text-align: left; padding: 34px 34px 34px 0; }
+        .launch-price { justify-content: flex-start; } .launch-name { font-size: 54px; }
+    }
+    @media (max-width: 519px) {
+        .offers-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+        .offer-body { padding: 12px 11px 13px; }
+        .offer-name { font-size: 11px; min-height: 30px; letter-spacing: .02em; }
+        .offer-price { margin-bottom: 10px; } .offer-price .val { font-size: 32px; }
+        .offer-cta { padding: 10px 11px; font-size: 11px; }
+        .offer-badge { top: 8px; left: 8px; font-size: 9px; padding: 4px 8px; }
+        .offer-duo { padding: 6px; } .offer-duo span { font-size: 20px; }
+    }
+    @media (prefers-reduced-motion: reduce) { .launch, .launch::after, .launch-img img, .launch-name b { animation: none; } }
+
     /* ============ BRANDS ============ */
     .brands {
         background: var(--graphite);
@@ -1446,82 +1500,101 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="wrap reveal">
         <div class="offers-head">
             <div>
-                <div class="offers-stamp">🔥 Ofertas da semana</div>
-                <h2 class="sec-title" style="margin-top: 14px;">Os mais pedidos,<br><em>com preço melhor.</em></h2>
+                <div class="offers-stamp">🔥 Ofertas de Outubro</div>
+                <h2 class="sec-title" style="margin-top: 14px;">Os destaques do mês,<br><em>com preço melhor.</em></h2>
             </div>
+            <div class="offers-cd" data-fim="2026-10-31T23:59:59-03:00">⏳ Acaba em <b data-cd>--</b></div>
         </div>
 
+        <a href="https://wa.me/5517997587526?text=Oi%21%20Quero%20o%20Whey%20World%20Collection%20Byopure%20900g%20%28lan%C3%A7amento%29%20por%20R%24%20179%2C90." class="launch" data-produto="Byopure · WHEY WORLD COLLECTION 900G">
+            <span class="launch-tag">🚀 Lançamento Byopure</span>
+            <span class="launch-off">-10%</span>
+            <div class="launch-img"><img src="assets/oferta_whey_world_collection.jpg" alt="Whey World Collection Byopure 900g, lançamento em Votuporanga" loading="lazy"></div>
+            <div class="launch-body">
+                <div class="launch-brand">Byopure · a marca premium mais vendida da loja</div>
+                <div class="launch-name">Whey <b>World Collection</b></div>
+                <div class="launch-desc">Pote 900g · Vários sabores · Chegou agora na NF</div>
+                <div class="launch-price">
+                    <span class="launch-old">De R$ 199,90</span>
+                    <span class="launch-new"><small>R$</small>179<i>,90</i></span>
+                    <span class="launch-save">Economize R$ 20</span>
+                </div>
+                <span class="launch-cta">Quero o lançamento <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+            </div>
+        </a>
+
         <div class="offers-grid">
-            <!-- Offer 1: Creatina -->
             <div class="offer">
                 <div class="offer-img">
-                    <img src="assets/oferta_creatina.jpeg" alt="Creatina ByoPure 210g — suplemento original Votuporanga" loading="lazy">
+                    <img class="fit" src="assets/oferta_whey_crazyness_1kg.png" alt="Whey Crazyness 1kg, whey protein em Votuporanga" loading="lazy">
+                    <span class="offer-badge">Oferta</span>
                 </div>
                 <div class="offer-body">
-                    <div class="offer-name">Creatina ByoPure · 210g</div>
+                    <div class="offer-name">Whey Crazyness · 1kg</div>
+                    <div class="offer-old">De R$ 129,90</div>
+                    <div class="offer-price">
+                        <span class="cur">R$</span>
+                        <span class="val">109</span>
+                        <span class="cent">,90</span>
+                    </div>
+                    <a href="https://wa.me/5517997587526?text=Oi%21%20Quero%20o%20Whey%20Crazyness%201kg%20por%20R%24%20109%2C90%20%28Oferta%20de%20Outubro%29." class="offer-cta" data-produto="Byopure · CRAZYNESS WHEY 1KG">
+                        <span>Quero essa oferta</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="offer">
+                <div class="offer-img">
+                    <img class="fit" src="assets/oferta_creatina_nyer.jpg" alt="Creatina Pura Nyer 300g, creatina em Votuporanga" loading="lazy">
+                    <span class="offer-badge">Oferta</span>
+                </div>
+                <div class="offer-body">
+                    <div class="offer-name">Creatina Pura Nyer · 300g</div>
+                    <div class="offer-old">De R$ 59,90</div>
                     <div class="offer-price">
                         <span class="cur">R$</span>
                         <span class="val">49</span>
                         <span class="cent">,90</span>
                     </div>
-                    <a href="https://wa.me/5517997587526?text=Oi!%20Quero%20a%20Creatina%20ByoPure%20por%20R%2449%2C90." class="offer-cta">
+                    <a href="https://wa.me/5517997587526?text=Oi%21%20Quero%20a%20Creatina%20Nyer%20300g%20por%20R%24%2049%2C90%20%28Oferta%20de%20Outubro%29." class="offer-cta" data-produto="Nyer Nutrition · CREATINA PURA 300G">
                         <span>Quero essa oferta</span>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
                     </a>
                 </div>
             </div>
-
-            <!-- Offer 2: Whey Nyer -->
-            <div class="offer">
+            <div class="offer offer-gold">
                 <div class="offer-img">
-                    <img src="assets/oferta_whey_nyer.jpeg" alt="Whey Gourmet Nyer 1kg — whey protein Votuporanga" loading="lazy">
+                    <div class="offer-duo"><img src="assets/oferta_whey_world_collection.jpg" alt="Combo Whey World Collection Byopure e Creatina Nyer" loading="lazy"><span>+</span><img src="assets/oferta_creatina_nyer.jpg" alt="" loading="lazy"></div>
+                    <span class="offer-badge">Combo</span>
                 </div>
                 <div class="offer-body">
-                    <div class="offer-name">Whey Gourmet Nyer · 1kg</div>
+                    <div class="offer-name">Whey Lançamento + Creatina Nyer</div>
+                    <div class="offer-old">De R$ 259,80</div>
                     <div class="offer-price">
                         <span class="cur">R$</span>
-                        <span class="val">159</span>
+                        <span class="val">229</span>
+                        <span class="cent">,80</span>
+                    </div>
+                    <a href="https://wa.me/5517997587526?text=Oi%21%20Quero%20o%20COMBO%20Whey%20World%20Collection%20Byopure%20%2B%20Creatina%20Nyer%20300g%20por%20R%24%20229%2C80." class="offer-cta" data-produto="WHEY WORLD COLLECTION + CREATINA">
+                        <span>Quero essa oferta</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="offer">
+                <div class="offer-img">
+                    <div class="offer-duo"><img src="assets/oferta_whey_crazyness_1kg.png" alt="Combo 2 Whey Crazyness 1kg" loading="lazy"><span>+</span><img src="assets/oferta_whey_crazyness_1kg.png" alt="" loading="lazy"></div>
+                    <span class="offer-badge">Combo 2kg</span>
+                </div>
+                <div class="offer-body">
+                    <div class="offer-name">2X Whey Crazyness · 2kg</div>
+                    <div class="offer-old">De R$ 259,80</div>
+                    <div class="offer-price">
+                        <span class="cur">R$</span>
+                        <span class="val">199</span>
                         <span class="cent">,90</span>
                     </div>
-                    <a href="https://wa.me/5517997587526?text=Oi!%20Quero%20o%20Whey%20Gourmet%20Nyer%201kg%20por%20R%24159%2C90." class="offer-cta">
-                        <span>Quero essa oferta</span>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Offer 3: CrazyBull -->
-            <div class="offer">
-                <div class="offer-img">
-                    <img src="assets/oferta_crazybull.jpeg" alt="CrazyBull Pré-treino 300g — pré-treino Votuporanga" loading="lazy">
-                </div>
-                <div class="offer-body">
-                    <div class="offer-name">CrazyBull Pré-treino · 300g</div>
-                    <div class="offer-price">
-                        <span class="cur">R$</span>
-                        <span class="val">95</span>
-                        <span class="cent">,00</span>
-                    </div>
-                    <a href="https://wa.me/5517997587526?text=Oi!%20Quero%20o%20CrazyBull%20Pr%C3%A9-treino%20por%20R%2495." class="offer-cta">
-                        <span>Quero essa oferta</span>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Offer 4: Whey Crazyness -->
-            <div class="offer">
-                <div class="offer-img">
-                    <img src="assets/oferta_whey_crazyness.jpeg" alt="Whey Crazyness 1kg — whey protein Votuporanga" loading="lazy">
-                </div>
-                <div class="offer-body">
-                    <div class="offer-name">Whey Crazyness · 1kg</div>
-                    <div class="offer-price">
-                        <span class="cur">R$</span>
-                        <span class="val">105</span>
-                        <span class="cent">,00</span>
-                    </div>
-                    <a href="https://wa.me/5517997587526?text=Oi!%20Quero%20o%20Whey%20Crazyness%201kg%20por%20R%24105%2C00." class="offer-cta">
+                    <a href="https://wa.me/5517997587526?text=Oi%21%20Quero%20o%20COMBO%202x%20Whey%20Crazyness%201kg%20%282KG%29%20por%20R%24%20199%2C90%20%28Oferta%20de%20Outubro%29." class="offer-cta" data-produto="2X WHEY CRAZYNESS · 2KG">
                         <span>Quero essa oferta</span>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
                     </a>
@@ -1813,6 +1886,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }, { threshold: 0.3 });
             io2.observe(hero);
         }
+    })();
+
+    // contagem das Ofertas de Outubro (horario de Sao Paulo)
+    (function () {
+        var c = document.querySelector('.offers-cd'); if (!c) return;
+        var fim = new Date(c.getAttribute('data-fim')).getTime(), b = c.querySelector('[data-cd]');
+        var p = function (n) { return n < 10 ? '0' + n : '' + n; };
+        var t = function () { var r = fim - Date.now(); if (r <= 0) { c.style.display = 'none'; return; }
+            b.textContent = Math.floor(r / 864e5) + 'd ' + p(Math.floor(r / 36e5) % 24) + 'h ' + p(Math.floor(r / 6e4) % 60) + 'm ' + p(Math.floor(r / 1e3) % 60) + 's'; };
+        t(); setInterval(t, 1000);
     })();
 </script>
 
