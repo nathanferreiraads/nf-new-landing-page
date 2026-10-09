@@ -82,17 +82,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <span class="tx"><span class="t1">Pedir pelo WhatsApp</span><span class="t2">Atendimento humano, resposta rápida</span></span>
       <span class="go">›</span>
     </a>
-    <a class="bt neon" data-ev="ClickCatalogo" data-ga4="click_catalogo" data-destino="/catalogo/" href="/catalogo/?utm_source=instagram&amp;utm_medium=link_bio&amp;utm_campaign=bio_nf">
+    <a class="bt neon" data-bio="catalogo" data-destino="/catalogo/" href="/catalogo/?utm_source=instagram&amp;utm_medium=link_bio&amp;utm_campaign=bio_nf">
       <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h12"/></svg></span>
       <span class="tx"><span class="t1">Catálogo e preços</span><span class="t2">+200 produtos originais a pronta entrega</span></span>
       <span class="go">›</span>
     </a>
-    <a class="bt" data-ev="ClickSite" data-ga4="click_site" data-destino="/" href="/?utm_source=instagram&amp;utm_medium=link_bio&amp;utm_campaign=bio_nf">
+    <a class="bt" data-bio="site" data-destino="/" href="/?utm_source=instagram&amp;utm_medium=link_bio&amp;utm_campaign=bio_nf">
       <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span>
       <span class="tx"><span class="t1">Site da NF Suplementos</span><span class="t2">Ofertas, entrega e como funciona</span></span>
       <span class="go">›</span>
     </a>
-    <a class="bt" data-ev="ClickAvaliacaoGoogle" data-ga4="click_avaliacao_google" href="https://search.google.com/local/writereview?placeid=ChIJJ413VvNZvZQRInhUreaYYPE" target="_blank" rel="noopener">
+    <a class="bt" data-bio="avaliacao_google" href="https://search.google.com/local/writereview?placeid=ChIJJ413VvNZvZQRInhUreaYYPE" target="_blank" rel="noopener">
       <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#FFC94D" d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg></span>
       <span class="tx"><span class="t1">Avaliar no Google</span><span class="t2">Leva 30 segundos e ajuda muito a loja</span></span>
       <span class="go">›</span>
@@ -109,17 +109,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </main>
 <script>
 (function () {
-  // os botões da bio: evento no navegador (GTM) e no servidor com o mesmo id. O WhatsApp é do nf-rastreio.js.
+  // A BIO DISPARA SO ClickLinkBio, e o content_name diz o que foi (pedido do Nathan, 09/10/2026: uma conversao personalizada
+  // por content_name no Meta, sem confundir com o ClickButtonWhatsapp do site):
+  //   abriu_bio (chegou) · whatsapp (o nf-rastreio.js dispara) · catalogo · site · avaliacao_google
+  // Navegador (GTM, content_name na tag) e servidor (site-capi) com o mesmo id.
   var NF = window.NF;
   if (!NF) return;
-  NF.evento("ClickLinkBio", "click_link_bio", {});   // chegou pela bio (o "click link bio" do Nathan)
+  NF.evento("ClickLinkBio", "click_link_bio", { content_name: "abriu_bio" });
   var fb = (NF.origem() || {}).fbclid;
-  var bts = document.querySelectorAll("a[data-ev]");
+  var bts = document.querySelectorAll("a[data-bio]");
   for (var i = 0; i < bts.length; i++) {
     (function (a) {
       // o fbclid do Instagram segue junto para o catálogo e o site (o _fbc já está no cookie do domínio, isto é para o GA4)
       if (fb && a.getAttribute("data-destino")) a.setAttribute("href", a.getAttribute("href") + "&fbclid=" + encodeURIComponent(fb));
-      a.addEventListener("click", function () { NF.evento(a.getAttribute("data-ev"), a.getAttribute("data-ga4"), { content_name: a.getAttribute("data-ev") }); });
+      a.addEventListener("click", function () { NF.evento("ClickLinkBio", "click_link_bio", { content_name: a.getAttribute("data-bio") }); });
     })(bts[i]);
   }
 })();

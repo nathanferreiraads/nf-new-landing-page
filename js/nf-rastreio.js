@@ -176,7 +176,8 @@
   function evento(nome, ga4, extra) {
     var id = novoId("ev");
     W.dataLayer.push({ event: "nf_evento", nf_evento: nome, nf_evento_ga4: ga4 || nome, nf_event_id: id, nf_produto: (extra && extra.content_name) || "", nf_pagina: pg });
-    (/^(ViewContent|ClickLinkBio)$/.test(nome) ? capiDePagina : capi)(nome, id, extra || {});
+    // evento de PAGINA espera o _fbp; clique sai na hora (a pessoa esta saindo da pagina)
+    (nome === "ViewContent" || (extra && extra.content_name === "abriu_bio") ? capiDePagina : capi)(nome, id, extra || {});
     return id;
   }
   // captura (true): roda antes do clique seguir, e o href já sai com o código mesmo que o link tenha nascido depois
@@ -186,8 +187,11 @@
       while (el && el !== D) { if (el.tagName === "A" && el.getAttribute("href")) { a = el; break; } el = el.parentNode; }
       if (!a || !decorar(a)) return;
       var produto = produtoDo(a), id = novoId("wa");
-      W.dataLayer.push({ event: "nf_evento", nf_evento: "ClickButtonWhatsapp", nf_evento_ga4: "whatsapp_click", nf_event_id: id, nf_produto: produto, nf_pagina: pg });
       preLead(produto);
+      // NA BIO o WhatsApp e ClickLinkBio (content_name "whatsapp"), nao ClickButtonWhatsapp: pedido do Nathan em 09/10/2026,
+      // para a conversao personalizada da bio nao se misturar com o clique no WhatsApp do site e do catalogo
+      if (pg === "bio") { evento("ClickLinkBio", "click_link_bio", { content_name: "whatsapp" }); return; }
+      W.dataLayer.push({ event: "nf_evento", nf_evento: "ClickButtonWhatsapp", nf_evento_ga4: "whatsapp_click", nf_event_id: id, nf_produto: produto, nf_pagina: pg });
       capi("ClickButtonWhatsapp", id, { content_name: produto });
     } catch (e) {}
   }, true);
@@ -197,5 +201,5 @@
   if (pg === "catalogo") evento("ViewContent", "view_item_list", { content_name: "Catálogo NF Suplementos", content_type: "product_group" });
 
   // para a bio e para o teste
-  W.NF = { vid: vid, pagina: pg, origem: origemValida, evento: evento, embutir: embutir, decorar: decorar, versao: "2026-10-09" };
+  W.NF = { vid: vid, pagina: pg, origem: origemValida, evento: evento, embutir: embutir, decorar: decorar, versao: "2026-10-09b" };
 })();
