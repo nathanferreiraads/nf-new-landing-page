@@ -23,11 +23,14 @@ def wa(msg): return "https://wa.me/%s?text=%s" % (WA, quote(msg, safe=""))
 
 D = json.load(open(os.path.join(RAIZ, "tools/catalogo/produtos.json"), encoding="utf-8"))
 POR_ID = {i["id"]: i for c in D["categorias"] for i in c["itens"]}
+CAT_SAB = {i["id"]: i.get("sabores", c.get("sabores", False)) for c in D["categorias"] for i in c["itens"]}
 TOTAL = len(POR_ID) + len(D["ofertas"]["combos"])
 
 FAQ = [
  ("Como funciona o pedido pelo catálogo?",
   "Toque em Adicionar nos produtos que você quer, abra Ver pedido e toque em Enviar pedido no WhatsApp. A Fernanda recebe a lista pronta com o total, confirma o estoque e os sabores e combina a entrega e o pagamento."),
+ ("Como escolho o sabor?",
+  "Os sabores variam conforme a disponibilidade do estoque no dia. No pedido, escreva o sabor que você prefere; a Fernanda confirma no WhatsApp quais sabores tem antes de fechar."),
  ("Vocês entregam no mesmo dia em Votuporanga?",
   "Sim. Pedidos feitos até as 14h são entregues no mesmo dia em Votuporanga, com entrega grátis."),
  ("Quais as formas de pagamento?",
@@ -42,18 +45,19 @@ FAQ = [
 
 WA_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>'
 
-def card(p, destaque=False):
+def card(p, destaque=False, sab=False):
+    sab = p.get("sabores", sab)
     c = centavos(p["preco"]); de = centavos(p["de"]) if p.get("de") else 0
     selo = ""
     if p.get("selo"): selo = '<span class="selo selo-nome">%s</span>' % esc(p["selo"])
     elif de > c: selo = '<span class="selo">-%d%%</span>' % round((1 - c / de) * 100)
     antes = '<s>R$ %s</s>' % reais(de) if de > c else ""
-    return f'''<article class="p{' p-destaque' if destaque else ''}" data-id="{esc(p['id'])}" data-nome="{esc(p['falado'])}" data-preco="{c}" data-busca="{esc((p['marca'] + ' ' + p['nome'] + ' ' + p['falado'] + ' ' + p['desc']).lower())}">
-<div class="p-img">{selo}<img src="{esc(p['img'])}" alt="{esc(p['falado'])}" loading="lazy" decoding="async" width="300" height="300"></div>
+    return f'''<article class="p{' p-destaque' if destaque else ''}"{' data-sabor="1"' if sab else ''} data-id="{esc(p['id'])}" data-nome="{esc(p['falado'])}" data-preco="{c}" data-busca="{esc((p['marca'] + ' ' + p['nome'] + ' ' + p['falado'] + ' ' + p['desc']).lower())}">
+<div class="p-img{' p-img2' if p.get('img2') else ''}">{selo}<img src="{esc(p['img'])}" alt="{esc(p['falado'])}" loading="lazy" decoding="async" width="300" height="300">{('<img src="%s" alt="" loading="lazy" decoding="async" width="300" height="300">' % esc(p['img2'])) if p.get('img2') else ''}</div>
 <div class="p-txt">
 <p class="p-marca">{esc(p['marca'])}</p>
 <h3 class="p-nome">{esc(p['nome'])}</h3>
-<p class="p-desc">{esc(p['desc'])}</p>
+<p class="p-desc">{esc(p['desc'])}</p>{'<p class="p-sabor">Sabores conforme a disponibilidade</p>' if sab else ''}
 </div>
 <div class="p-pe">
 <p class="p-preco">{antes}<strong>R$ {reais(c)}</strong></p>
@@ -69,7 +73,7 @@ def pagina():
     nav = '<a href="#ofertas" class="chip chip-of">Ofertas</a>' + "".join(
         '<a href="#%s" class="chip">%s</a>' % (c["id"], esc(c["titulo"])) for c in D["categorias"])
     of = D["ofertas"]
-    of_cards = "".join(card(x, True) for x in of["combos"]) + "".join(card(POR_ID[i], True) for i in of["produtos"])
+    of_cards = "".join(card(x, True) for x in of["combos"]) + "".join(card(POR_ID[i], True, CAT_SAB[i]) for i in of["produtos"])
     secoes = ""
     for c in D["categorias"]:
         extra = ""
@@ -78,7 +82,7 @@ def pagina():
         secoes += f'''<section class="cat" id="{c['id']}" aria-labelledby="t-{c['id']}">
 <header class="cat-h"><h2 id="t-{c['id']}">{esc(c['titulo'])}</h2><p>{esc(c['texto'])}{extra}</p></header>
 <div class="grade">
-{chr(10).join(card(p) for p in c['itens'])}
+{chr(10).join(card(p, False, c.get('sabores', False)) for p in c['itens'])}
 </div>
 </section>
 '''
@@ -133,7 +137,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <a class="pular" href="#ofertas">Ir para os produtos</a>
 
 <header class="topo">
-<a class="marca" href="/" aria-label="NF Suplementos, página inicial"><b>NF</b><span>Suplementos<small>Votuporanga</small></span></a>
+<a class="marca" href="/" aria-label="NF Suplementos, página inicial"><img src="logo-nf.png" alt="NF Suplementos" width="200" height="214"><span>Votuporanga</span></a>
 <a class="header-wa" href="{oi}" target="_blank" rel="noopener" data-produto="catálogo: dúvida no topo">{WA_SVG}<span>Tirar dúvida</span></a>
 </header>
 
@@ -143,7 +147,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p class="abre-p">{TOTAL} produtos originais com preço. Entrega grátis na cidade para pedido feito até as 14h. Você escolhe aqui e fecha com a Fernanda no WhatsApp.</p>
 <ol class="passos">
 <li><span><b>Adicione</b> os produtos ao pedido</span></li>
-<li><span><b>Confira</b> a lista e o total</span></li>
+<li><span><b>Confira</b> a lista e diga o sabor</span></li>
 <li><span><b>Envie</b> pronto no WhatsApp</span></li>
 </ol>
 <label class="busca"><span class="so-leitor">Buscar produto ou marca</span>
@@ -194,8 +198,9 @@ Seg a sex 9h às 18h · Sáb 9h às 12h · WhatsApp <a class="foot-social" href=
 <div class="pedido-corpo">
 <p class="pedido-vazio" id="pedido-vazio">Seu pedido está vazio. Toque em Adicionar nos produtos do catálogo.</p>
 <ul class="itens" id="itens"></ul>
-<label class="obs" id="obs-caixa" hidden><span>Sabor ou observação (opcional)</span>
-<textarea id="obs" rows="2" maxlength="200" placeholder="Ex.: whey de chocolate, creatina sem sabor"></textarea></label>
+<label class="obs" id="obs-caixa" hidden><span id="obs-titulo">Observação (opcional)</span>
+<small class="obs-aviso" id="obs-aviso" hidden>Os sabores dependem do estoque do dia. Escreva o que você prefere e a Fernanda confirma no WhatsApp o que tem.</small>
+<textarea id="obs" rows="2" maxlength="200" placeholder="Ex.: whey de chocolate, pré-treino de uva"></textarea></label>
 </div>
 <footer class="pedido-pe" id="pedido-pe" hidden>
 <p class="total"><span>Total</span><strong id="total">R$ 0,00</strong></p>

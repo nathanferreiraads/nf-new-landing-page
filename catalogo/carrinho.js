@@ -11,7 +11,7 @@
   var cards = D.querySelectorAll(".p[data-id]");
   for (var i = 0; i < cards.length; i++) {
     var c = cards[i], id = c.getAttribute("data-id");
-    if (!prod[id]) { var im = c.querySelector("img"); prod[id] = { nome: c.getAttribute("data-nome"), preco: parseInt(c.getAttribute("data-preco"), 10) || 0, img: im ? im.getAttribute("src") : "" }; }
+    if (!prod[id]) { var im = c.querySelector("img"); prod[id] = { sabor: c.getAttribute("data-sabor") === "1", nome: c.getAttribute("data-nome"), preco: parseInt(c.getAttribute("data-preco"), 10) || 0, img: im ? im.getAttribute("src") : "" }; }
   }
   var pedido = {}, ordem = [];                     // id -> quantidade; ordem em que entrou
   try {
@@ -43,7 +43,9 @@
     ordem.forEach(function (id) { l.push("▪ " + pedido[id] + "x " + prod[id].nome + " · " + brl(pedido[id] * prod[id].preco)); });
     l.push("", "*Total: " + brl(s.t) + "*");
     var o = $("obs").value.replace(/\s+/g, " ").replace(/^\s+|\s+$/g, "");
-    if (o) l.push("Obs.: " + o);
+    var temSabor = ordem.some(function (id) { return prod[id].sabor; });
+    if (temSabor) l.push(o ? "Sabor / obs.: " + o : "Sabor: me fala quais tem disponível");
+    else if (o) l.push("Obs.: " + o);
     return l.join("\n");
   }
   function resumo() { return ("pedido: " + ordem.map(function (id) { return pedido[id] + "x " + prod[id].nome; }).join(" + ")).slice(0, 88); }
@@ -80,6 +82,9 @@
     });
     $("pedido-vazio").hidden = !!s.n;
     $("obs-caixa").hidden = !s.n;
+    var ts = ordem.some(function (id) { return prod[id].sabor; });
+    $("obs-aviso").hidden = !ts;
+    $("obs-titulo").textContent = ts ? "Qual sabor você prefere?" : "Observação (opcional)";
     $("pedido-pe").hidden = !s.n;
     $("total").textContent = brl(s.t);
     var a = $("enviar");

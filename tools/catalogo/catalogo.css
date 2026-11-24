@@ -1,5 +1,5 @@
 :root{--preto:#000;--branco:#fff;--papel:#f1f1ee;--cinza:#666;--linha:#deded9;--laranja:#ff6b1a;--verde:#128c4a;
---titulo:"Anton","Arial Narrow",Impact,sans-serif;--texto:"Space Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;--larg:1240px;--topo:56px}
+--titulo:"Anton","Arial Narrow",Impact,sans-serif;--texto:"Space Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;--larg:1240px;--topo:62px}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--branco);color:var(--preto);font-family:var(--texto);font-size:16px;line-height:1.45;padding-bottom:96px}
@@ -15,9 +15,8 @@ button{font:inherit;color:inherit;cursor:pointer}
 /* topo */
 .topo{position:sticky;top:0;z-index:30;height:var(--topo);background:var(--preto);color:var(--branco);display:flex;align-items:center;justify-content:space-between;padding:0 max(16px,calc((100vw - var(--larg))/2 + 16px))}
 .marca{display:flex;align-items:center;gap:10px;text-decoration:none}
-.marca b{font-family:var(--titulo);font-weight:400;font-size:30px;line-height:1;letter-spacing:.5px}
-.marca span{font-size:13px;font-weight:700;line-height:1.1;text-transform:uppercase;letter-spacing:1.2px}
-.marca small{display:block;font-weight:500;font-size:11px;letter-spacing:.6px;color:#bdbdbd;text-transform:none}
+.marca img{height:46px;width:auto}
+.marca span{font-size:13px;font-weight:500;color:#bdbdbd;border-left:1px solid #444;padding-left:10px}
 .header-wa{display:flex;align-items:center;gap:8px;text-decoration:none;font-weight:600;font-size:14px;border:1.5px solid #fff;border-radius:999px;padding:7px 14px}
 .header-wa svg{width:17px;height:17px}
 .header-wa:hover{background:#fff;color:#000}
@@ -174,3 +173,11 @@ body.aberto{overflow:hidden}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important}}
 
 @media(min-width:760px){.passos{grid-template-columns:repeat(3,1fr);gap:20px}.abre-in{padding:44px 16px 46px}}
+
+/* sabores e combo de dois produtos */
+.p-sabor{margin:6px 0 0;font-size:12px;font-weight:600;color:#000;display:inline-block;background:#ffe6d6;border-radius:6px;padding:2px 7px}
+.p-img2{grid-template-columns:1fr 1fr;padding:0 6%}
+.p-img2 img{width:100%;height:80%}
+.obs-aviso{display:block;font-size:13px;color:#000;background:#ffe6d6;border-radius:10px;padding:8px 10px;margin-bottom:8px;line-height:1.35}
+@media(min-width:760px){.grade-of{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:1180px){.grade-of{grid-template-columns:repeat(3,minmax(0,1fr))}}

@@ -1,10 +1,13 @@
 {
- "_leia": "Fonte única do catálogo. Mudou preço ou estoque? Edite aqui e rode: python3 tools/gerar_catalogo.py && python3 tools/gerar_seo.py",
+ "_leia": "Fonte única do catálogo. Mudou preço ou estoque? Edite aqui e rode: python3 tools/gerar_catalogo.py && python3 tools/gerar_seo.py | 'sabores': true mostra 'Sabores conforme a disponibilidade' no card (na categoria vale para todos; no produto, sobrepõe).",
  "ofertas": {
   "titulo": "Ofertas",
   "texto": "Enquanto durar o estoque.",
   "produtos": [
-   "byopure-crazyness-whey-1kg"
+   "byopure-crazyness-whey-1kg",
+   "byopure-creatina-pura-210g",
+   "byopure-byocoffe-300g",
+   "nyer-nutrition-brutal-termogenico"
   ],
   "combos": [
    {
@@ -16,7 +19,21 @@
     "preco": "199,90",
     "de": "259,80",
     "img": "mockups/whey-crazyness-1kg.png",
-    "selo": "Combo"
+    "selo": "Combo",
+    "sabores": true
+   },
+   {
+    "id": "combo-byo-sek-byo-hot",
+    "marca": "Byopure",
+    "nome": "BYO SEK + BYO HOT",
+    "falado": "Combo Byo Sek 300g + Byo Hot 60 cáps Byopure",
+    "desc": "Byo Sek 300g em pó + Byo Hot 60 cápsulas",
+    "preco": "149,90",
+    "de": "158,00",
+    "img": "mockups/byosek.png",
+    "img2": "mockups/byohot.png",
+    "selo": "Combo",
+    "sabores": true
    }
   ]
  },
@@ -147,7 +164,8 @@
      "de": null,
      "img": "mockups/whey-dowmith.png"
     }
-   ]
+   ],
+   "sabores": true
   },
   {
    "id": "creatina",
@@ -192,7 +210,8 @@
      "desc": "Saborizada · Fácil Consumo",
      "preco": "85,00",
      "de": null,
-     "img": "mockups/creatina-300g-sabor-byopure.png"
+     "img": "mockups/creatina-300g-sabor-byopure.png",
+     "sabores": true
     },
     {
      "id": "dux-nutrition-creatina-pura-300g",
@@ -244,7 +263,8 @@
      "de": "89,90",
      "img": "mockups/kreas-300g.png"
     }
-   ]
+   ],
+   "sabores": false
   },
   {
    "id": "pre-treino",
@@ -319,7 +339,8 @@
      "desc": "Pró-Hormonal · Cápsulas",
      "preco": "65,00",
      "de": null,
-     "img": "mockups/testo-boost-pre-treino.png"
+     "img": "mockups/testo-boost-pre-treino.png",
+     "sabores": false
     },
     {
      "id": "nutra-gold-blast-day-300g",
@@ -351,7 +372,8 @@
      "de": null,
      "img": "mockups/evora-pw-pre-treino.png"
     }
-   ]
+   ],
+   "sabores": true
   },
   {
    "id": "termogenicos",
@@ -364,8 +386,8 @@
      "nome": "BRUTAL TERMOGÊNICO",
      "falado": "Brutal Termogênico Nyer",
      "desc": "60 Cáps · 200mg Cafeína",
-     "preco": "69,90",
-     "de": "80,00",
+     "preco": "49,90",
+     "de": "69,90",
      "img": "nyer-brutal.jpg"
     },
     {
@@ -386,7 +408,8 @@
      "desc": "Emagrecedor · Em Pó",
      "preco": "79,00",
      "de": null,
-     "img": "mockups/byosek.png"
+     "img": "mockups/byosek.png",
+     "sabores": true
     },
     {
      "id": "byopure-crazyness-lipo-z-60cps",
@@ -408,7 +431,8 @@
      "de": null,
      "img": "mockups/caffeina-byopure.png"
     }
-   ]
+   ],
+   "sabores": false
   },
   {
    "id": "cafe",
@@ -421,7 +445,7 @@
      "nome": "BYOCOFFE 300G",
      "falado": "ByoCoffe Byopure 300g",
      "desc": "Café Funcional · Termogênico",
-     "preco": "119,90",
+     "preco": "99,00",
      "de": "149,90",
      "img": "mockups/byocoffe-byopure.png"
     },
@@ -445,7 +469,8 @@
      "de": null,
      "img": "mockups/supercoffe-380g.png"
     }
-   ]
+   ],
+   "sabores": true
   },
   {
    "id": "endurance",
@@ -510,7 +535,8 @@
      "desc": "Repositor de Sais",
      "preco": "39,20",
      "de": null,
-     "img": "mockups/salt-caps.png"
+     "img": "mockups/salt-caps.png",
+     "sabores": false
     },
     {
      "id": "byopure-byo-hidrat-720g",
@@ -592,7 +618,8 @@
      "de": null,
      "img": "mockups/bt-gel-nitrato-com-cafeina.png"
     }
-   ]
+   ],
+   "sabores": true
   },
   {
    "id": "aminoacidos",
@@ -629,7 +656,8 @@
      "de": null,
      "img": "mockups/arginina.png"
     }
-   ]
+   ],
+   "sabores": false
   },
   {
    "id": "vitaminas",
@@ -826,7 +854,8 @@
      "de": null,
      "img": "mockups/nac.png"
     }
-   ]
+   ],
+   "sabores": false
   },
   {
    "id": "massa",
@@ -841,7 +870,8 @@
      "desc": "Carboidrato Baixo IG",
      "preco": "69,00",
      "de": null,
-     "img": "mockups/palatinose.png"
+     "img": "mockups/palatinose.png",
+     "sabores": false
     },
     {
      "id": "dowmith-mammut-mass-3kg",
@@ -871,9 +901,11 @@
      "desc": "Carbo Ignition MD",
      "preco": "45,00",
      "de": null,
-     "img": "mockups/dextrose.png"
+     "img": "mockups/dextrose.png",
+     "sabores": false
     }
-   ]
+   ],
+   "sabores": true
   },
   {
    "id": "pastas",
@@ -910,7 +942,8 @@
      "de": null,
      "img": "mockups/protein-crisp-integralmedica.png"
     }
-   ]
+   ],
+   "sabores": true
   },
   {
    "id": "acessorios",
@@ -957,7 +990,8 @@
      "de": null,
      "img": "mockups/camiseta-nf.png"
     }
-   ]
+   ],
+   "sabores": false
   }
  ]
 }
