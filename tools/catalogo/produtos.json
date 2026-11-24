@@ -1,0 +1,963 @@
+{
+ "_leia": "Fonte única do catálogo. Mudou preço ou estoque? Edite aqui e rode: python3 tools/gerar_catalogo.py && python3 tools/gerar_seo.py",
+ "ofertas": {
+  "titulo": "Ofertas",
+  "texto": "Enquanto durar o estoque.",
+  "produtos": [
+   "byopure-crazyness-whey-1kg"
+  ],
+  "combos": [
+   {
+    "id": "combo-2x-whey-crazyness-1kg",
+    "marca": "Byopure",
+    "nome": "2X WHEY CRAZYNESS 1KG",
+    "falado": "Combo 2x Whey Crazyness 1kg Byopure",
+    "desc": "2 potes de 1 kg · 2 kg de whey no total",
+    "preco": "199,90",
+    "de": "259,80",
+    "img": "mockups/whey-crazyness-1kg.png",
+    "selo": "Combo"
+   }
+  ]
+ },
+ "categorias": [
+  {
+   "id": "whey",
+   "titulo": "Whey protein",
+   "texto": "Whey concentrado, isolado e hidrolisado, em pote ou refil, a pronta entrega em Votuporanga.",
+   "itens": [
+    {
+     "id": "byopure-crazyness-whey-1kg",
+     "marca": "Byopure",
+     "nome": "CRAZYNESS WHEY 1KG",
+     "falado": "Whey Crazyness 1kg Byopure",
+     "desc": "Whey Concentrado · 1KG",
+     "preco": "109,90",
+     "de": "129,90",
+     "img": "mockups/whey-crazyness-1kg.png"
+    },
+    {
+     "id": "byopure-whey-world-collection-900g",
+     "marca": "Byopure",
+     "nome": "WHEY WORLD COLLECTION 900G",
+     "falado": "Whey World Collection Byopure 900g",
+     "desc": "Premium · Pote 900g",
+     "preco": "179,90",
+     "de": "199,90",
+     "img": "mockups/whey-world-collection-byopure.jpg",
+     "selo": "Lançamento"
+    },
+    {
+     "id": "byopure-whey-2w-isolado-conc",
+     "marca": "Byopure",
+     "nome": "WHEY 2W ISOLADO+CONC.",
+     "falado": "Whey 2W Isolado+Conc. Byopure",
+     "desc": "Pote 900g · C/ Enzima Lactase p/ Intolerantes",
+     "preco": "199,90",
+     "de": "229,90",
+     "img": "mockups/whey-2w-byopure.png"
+    },
+    {
+     "id": "byopure-byobeef",
+     "marca": "Byopure",
+     "nome": "BYOBEEF",
+     "falado": "Byobeef Byopure",
+     "desc": "Pote 900g · Proteína Isolada da Carne",
+     "preco": "189,00",
+     "de": null,
+     "img": "mockups/byobeef-byopure.png"
+    },
+    {
+     "id": "byopure-byohydro-isolado-hidro",
+     "marca": "Byopure",
+     "nome": "BYOHYDRO ISOLADO+HIDRO.",
+     "falado": "Byohydro Isolado+Hidro. Byopure",
+     "desc": "Pote 900g · Zero Lactose",
+     "preco": "299,90",
+     "de": null,
+     "img": "mockups/whey-byohydro-byopure.png"
+    },
+    {
+     "id": "byopure-crazyness-whey-1-8kg",
+     "marca": "Byopure",
+     "nome": "CRAZYNESS WHEY 1,8KG",
+     "falado": "Whey Crazyness 1,8kg Byopure",
+     "desc": "Whey Concentrado · 1,8kg",
+     "preco": "174,00",
+     "de": null,
+     "img": "mockups/whey-crazyness-1-8kg.png"
+    },
+    {
+     "id": "dux-nutrition-fresh-whey-900g",
+     "marca": "Dux Nutrition",
+     "nome": "FRESH WHEY 900G",
+     "falado": "Fresh Whey 900g Dux Nutrition",
+     "desc": "Pote 900g · Chocolate/Avelã",
+     "preco": "319,90",
+     "de": null,
+     "img": "mockups/freshwhey-dux-900g.png"
+    },
+    {
+     "id": "dux-nutrition-whey-dux",
+     "marca": "Dux Nutrition",
+     "nome": "WHEY DUX",
+     "falado": "Whey Dux 900g Dux Nutrition",
+     "desc": "Pote 900g · Concentrado",
+     "preco": "249,90",
+     "de": null,
+     "img": "mockups/whey-dux-900g.png"
+    },
+    {
+     "id": "integralmedica-whey-concentrado",
+     "marca": "Integralmédica",
+     "nome": "WHEY CONCENTRADO",
+     "falado": "Whey Concentrado Integralmédica",
+     "desc": "Pote ou Refil 900g",
+     "preco": "165,90",
+     "de": null,
+     "img": "mockups/whey-integralmedica.png"
+    },
+    {
+     "id": "max-titanium-100-whey",
+     "marca": "Max Titanium",
+     "nome": "100% WHEY",
+     "falado": "100% Whey Max Titanium",
+     "desc": "Pote ou Refil 900g",
+     "preco": "165,90",
+     "de": null,
+     "img": "mockups/whey-max-titanium.png"
+    },
+    {
+     "id": "nutra-gold-whey-3w-nutra-gold",
+     "marca": "Nutra Gold",
+     "nome": "WHEY 3W NUTRA GOLD",
+     "falado": "Whey 3W Nutra Gold 900g",
+     "desc": "Pacote 900g",
+     "preco": "189,90",
+     "de": null,
+     "img": "mockups/whey-nutragold.png"
+    },
+    {
+     "id": "dowmith-whey-concentrado",
+     "marca": "Dowmith",
+     "nome": "WHEY CONCENTRADO",
+     "falado": "Whey Concentrado Dowmith",
+     "desc": "Pacote 900g",
+     "preco": "129,90",
+     "de": null,
+     "img": "mockups/whey-dowmith.png"
+    }
+   ]
+  },
+  {
+   "id": "creatina",
+   "titulo": "Creatina",
+   "texto": "Creatina monohidratada pura, de 210 g a 510 g, das marcas mais pedidas da loja.",
+   "itens": [
+    {
+     "id": "byopure-creatina-pura-210g",
+     "marca": "Byopure",
+     "nome": "CREATINA PURA 210G",
+     "falado": "Creatina 210g Byopure",
+     "desc": "Monohidratada · 100% Pura",
+     "preco": "49,90",
+     "de": "69,90",
+     "img": "mockups/creatina-210g-byopure.png"
+    },
+    {
+     "id": "byopure-creatina-pura-345g",
+     "marca": "Byopure",
+     "nome": "CREATINA PURA 345G",
+     "falado": "Creatina 345g Byopure",
+     "desc": "Monohidratada · Rendimento",
+     "preco": "79,90",
+     "de": "110,00",
+     "img": "mockups/creatina-345g-byopure.png"
+    },
+    {
+     "id": "byopure-creatina-pura-510g",
+     "marca": "Byopure",
+     "nome": "CREATINA PURA 510G",
+     "falado": "Creatina 510g Byopure",
+     "desc": "Família · Melhor Custo/g",
+     "preco": "109,90",
+     "de": "149,90",
+     "img": "mockups/creatina-510g-byopure.png"
+    },
+    {
+     "id": "byopure-creatina-c-sabor-315g",
+     "marca": "Byopure",
+     "nome": "CREATINA C/ SABOR 315G",
+     "falado": "Creatina com sabor 315g Byopure",
+     "desc": "Saborizada · Fácil Consumo",
+     "preco": "85,00",
+     "de": null,
+     "img": "mockups/creatina-300g-sabor-byopure.png"
+    },
+    {
+     "id": "dux-nutrition-creatina-pura-300g",
+     "marca": "Dux Nutrition",
+     "nome": "CREATINA PURA 300G",
+     "falado": "Creatina Pura 300g Dux Nutrition",
+     "desc": "Monohidratada · 300g",
+     "preco": "89,00",
+     "de": null,
+     "img": "mockups/creatina-300g-dux.png"
+    },
+    {
+     "id": "black-skull-creatina-pura-300g",
+     "marca": "Black Skull",
+     "nome": "CREATINA PURA 300G",
+     "falado": "Creatina Pura 300g Black Skull",
+     "desc": "Monohidratada · 300g",
+     "preco": "75,00",
+     "de": null,
+     "img": "mockups/creatina-300g-blackskull.png"
+    },
+    {
+     "id": "max-titanium-creatina-pura-300g",
+     "marca": "Max Titanium",
+     "nome": "CREATINA PURA 300G",
+     "falado": "Creatina Pura 300g Max Titanium",
+     "desc": "Monohidratada · 300g",
+     "preco": "85,00",
+     "de": null,
+     "img": "mockups/creatina-300g-max-titanium.png"
+    },
+    {
+     "id": "probiotica-creatina-pura-300g",
+     "marca": "Probiótica",
+     "nome": "CREATINA PURA 300G",
+     "falado": "Creatina Pura 300g Probiótica",
+     "desc": "Monohidratada · 300g",
+     "preco": "80,00",
+     "de": null,
+     "img": "mockups/creatina-300g-probiotica.png"
+    },
+    {
+     "id": "isn-nutrition-creatina-kreas-300g",
+     "marca": "ISN Nutrition",
+     "nome": "CREATINA KREAS 300G",
+     "falado": "Creatina Kreas 300g ISN",
+     "desc": "Monohidratada · 300g",
+     "preco": "49,90",
+     "de": "89,90",
+     "img": "mockups/kreas-300g.png"
+    }
+   ]
+  },
+  {
+   "id": "pre-treino",
+   "titulo": "Pré-treino",
+   "texto": "Pré-treinos com e sem cafeína, para treinar de dia ou à noite.",
+   "itens": [
+    {
+     "id": "nyer-nutrition-dark-pump-pre-treino",
+     "marca": "Nyer Nutrition",
+     "nome": "DARK PUMP PRÉ TREINO",
+     "falado": "Dark Pump Nyer",
+     "desc": "300g · 30 Doses",
+     "preco": "89,00",
+     "de": "109,90",
+     "img": "nyer-darkpump.jpg"
+    },
+    {
+     "id": "byopure-byo-blast-150g",
+     "marca": "Byopure",
+     "nome": "BYO BLAST 150G",
+     "falado": "Byo Blast 150g Byopure",
+     "desc": "Pré-Treino · Pump & Foco",
+     "preco": "80,00",
+     "de": null,
+     "img": "mockups/byoblast-pre-treino.png"
+    },
+    {
+     "id": "byopure-crazyness-pre-200g",
+     "marca": "Byopure",
+     "nome": "CRAZYNESS PRÉ 200G",
+     "falado": "Crazyness Pré 200g Byopure",
+     "desc": "400mg de Cafeína · Alta Performance",
+     "preco": "98,00",
+     "de": null,
+     "img": "mockups/crazyness-pre-treino.png"
+    },
+    {
+     "id": "byopure-crazybull-pre-300g",
+     "marca": "Byopure",
+     "nome": "CRAZYBULL PRÉ 300G",
+     "falado": "Crazybull Pré 300g Byopure",
+     "desc": "Pré-Treino Forte",
+     "preco": "95,00",
+     "de": null,
+     "img": "mockups/crazybull-pre-treino.png"
+    },
+    {
+     "id": "byopure-cyclope-fury-420g",
+     "marca": "Byopure",
+     "nome": "CYCLOPE FURY 420G",
+     "falado": "Cyclope Fury 420g Byopure",
+     "desc": "Pré-Treino Extremo",
+     "preco": "145,00",
+     "de": null,
+     "img": "mockups/cyclope-fury-pre-treino.png"
+    },
+    {
+     "id": "byopure-magic-owl-300g",
+     "marca": "Byopure",
+     "nome": "MAGIC OWL 300G",
+     "falado": "Magic Owl 300g Byopure",
+     "desc": "Pré-Treino Noturno · Sem Cafeína",
+     "preco": "89,00",
+     "de": null,
+     "img": "mockups/magic-owl-pre-treino.png"
+    },
+    {
+     "id": "byopure-testo-boost-120cps",
+     "marca": "Byopure",
+     "nome": "TESTO BOOST 120CPS",
+     "falado": "Testo Boost 120 cáps Byopure",
+     "desc": "Pró-Hormonal · Cápsulas",
+     "preco": "65,00",
+     "de": null,
+     "img": "mockups/testo-boost-pre-treino.png"
+    },
+    {
+     "id": "nutra-gold-blast-day-300g",
+     "marca": "Nutra Gold",
+     "nome": "BLAST DAY 300G",
+     "falado": "Blast Day 300g Nutra Gold",
+     "desc": "Pré-Treino Diurno",
+     "preco": "89,00",
+     "de": null,
+     "img": "mockups/blast-day-pre-treino.png"
+    },
+    {
+     "id": "nutra-gold-blast-night-300g",
+     "marca": "Nutra Gold",
+     "nome": "BLAST NIGHT 300G",
+     "falado": "Blast Night 300g Nutra Gold",
+     "desc": "Pré-Treino Noturno",
+     "preco": "85,00",
+     "de": null,
+     "img": "mockups/blast-night-pre-treino.png"
+    },
+    {
+     "id": "darkness-evora-pw-300g",
+     "marca": "Darkness",
+     "nome": "ÉVORA PW 300G",
+     "falado": "Évora PW 300g Darkness",
+     "desc": "Pré-Treino · Alta Performance",
+     "preco": "119,90",
+     "de": null,
+     "img": "mockups/evora-pw-pre-treino.png"
+    }
+   ]
+  },
+  {
+   "id": "termogenicos",
+   "titulo": "Termogênicos",
+   "texto": "Termogênicos em cápsula e em pó, e cafeína pura.",
+   "itens": [
+    {
+     "id": "nyer-nutrition-brutal-termogenico",
+     "marca": "Nyer Nutrition",
+     "nome": "BRUTAL TERMOGÊNICO",
+     "falado": "Brutal Termogênico Nyer",
+     "desc": "60 Cáps · 200mg Cafeína",
+     "preco": "69,90",
+     "de": "80,00",
+     "img": "nyer-brutal.jpg"
+    },
+    {
+     "id": "byopure-byo-hot-60cps",
+     "marca": "Byopure",
+     "nome": "BYO HOT 60CPS",
+     "falado": "Byo Hot 60 cáps Byopure",
+     "desc": "Termogênico · Cápsulas",
+     "preco": "79,00",
+     "de": null,
+     "img": "mockups/byohot.png"
+    },
+    {
+     "id": "byopure-byo-sek-300g",
+     "marca": "Byopure",
+     "nome": "BYO SEK 300G",
+     "falado": "Byo Sek 300g Byopure",
+     "desc": "Emagrecedor · Em Pó",
+     "preco": "79,00",
+     "de": null,
+     "img": "mockups/byosek.png"
+    },
+    {
+     "id": "byopure-crazyness-lipo-z-60cps",
+     "marca": "Byopure",
+     "nome": "CRAZYNESS LIPO Z 60CPS",
+     "falado": "Lipo Z Crazyness 60 cápsulas",
+     "desc": "Termo · Cápsulas",
+     "preco": "89,00",
+     "de": null,
+     "img": "mockups/lipo-z.png"
+    },
+    {
+     "id": "byopure-cafeina-60cps",
+     "marca": "Byopure",
+     "nome": "CAFEÍNA 60CPS",
+     "falado": "Cafeína 60 cáps Byopure",
+     "desc": "200mg de Cafeína",
+     "preco": "33,90",
+     "de": null,
+     "img": "mockups/caffeina-byopure.png"
+    }
+   ]
+  },
+  {
+   "id": "cafe",
+   "titulo": "Café funcional",
+   "texto": "Cafés funcionais para começar o dia ou trocar o pré-treino.",
+   "itens": [
+    {
+     "id": "byopure-byocoffe-300g",
+     "marca": "Byopure",
+     "nome": "BYOCOFFE 300G",
+     "falado": "ByoCoffe Byopure 300g",
+     "desc": "Café Funcional · Termogênico",
+     "preco": "119,90",
+     "de": "149,90",
+     "img": "mockups/byocoffe-byopure.png"
+    },
+    {
+     "id": "caffeine-army-super-coffee-220g",
+     "marca": "Caffeine Army",
+     "nome": "SUPER COFFEE 220G",
+     "falado": "SuperCoffee 220g Caffeine Army",
+     "desc": "Pote 220g · Chocolate",
+     "preco": "149,90",
+     "de": null,
+     "img": "mockups/supercoffe-220g.png"
+    },
+    {
+     "id": "caffeine-army-super-coffee-380g",
+     "marca": "Caffeine Army",
+     "nome": "SUPER COFFEE 380G",
+     "falado": "SuperCoffee 380g Caffeine Army",
+     "desc": "Pote 380g · Tamanho Família",
+     "preco": "209,90",
+     "de": null,
+     "img": "mockups/supercoffe-380g.png"
+    }
+   ]
+  },
+  {
+   "id": "endurance",
+   "titulo": "Géis e hidratação",
+   "texto": "Géis de carboidrato, repositores de sais e isotônicos para corrida, pedal e prova.",
+   "itens": [
+    {
+     "id": "sudract-hydramaxi-sache",
+     "marca": "Sudract",
+     "nome": "HYDRAMAXI SACHÊ",
+     "falado": "Hydramaxi Sachê Sudract",
+     "desc": "Eletrólitos · 20g",
+     "preco": "3,50",
+     "de": null,
+     "img": "sudract-hydramaxi.jpg"
+    },
+    {
+     "id": "sudract-energy-pro-gel",
+     "marca": "Sudract",
+     "nome": "ENERGY PRO GEL",
+     "falado": "Energy Pro Gel Sudract",
+     "desc": "Sem Cafeína · 30g",
+     "preco": "5,20",
+     "de": null,
+     "img": "sudract-energy-gel.jpg"
+    },
+    {
+     "id": "sudract-energy-gel-black",
+     "marca": "Sudract",
+     "nome": "ENERGY GEL BLACK",
+     "falado": "Energy Gel Black Sudract",
+     "desc": "Com Cafeína · 30g",
+     "preco": "5,80",
+     "de": null,
+     "img": "sudract-energy-black.jpg"
+    },
+    {
+     "id": "sudract-carbo-ultra-gel",
+     "marca": "Sudract",
+     "nome": "+CARBO ULTRA GEL",
+     "falado": "+Carbo Ultra Gel Sudract",
+     "desc": "40g Carbo · 55g",
+     "preco": "11,90",
+     "de": null,
+     "img": "sudract-carbo-gel.jpg"
+    },
+    {
+     "id": "sudract-isotonic-drink-pro",
+     "marca": "Sudract",
+     "nome": "ISOTONIC DRINK PRO",
+     "falado": "Isotonic Drink Pro Sudract",
+     "desc": "900g · Rende 15L",
+     "preco": "44,00",
+     "de": null,
+     "img": "sudract-isotonic.jpg"
+    },
+    {
+     "id": "byopure-salt-caps-60cps",
+     "marca": "Byopure",
+     "nome": "SALT CAPS 60CPS",
+     "falado": "Salt Caps 60 cáps Byopure",
+     "desc": "Repositor de Sais",
+     "preco": "39,20",
+     "de": null,
+     "img": "mockups/salt-caps.png"
+    },
+    {
+     "id": "byopure-byo-hidrat-720g",
+     "marca": "Byopure",
+     "nome": "BYO HIDRAT 720G",
+     "falado": "Byo Hidrat 720g Byopure",
+     "desc": "Hidratante · Rende Muito",
+     "preco": "65,00",
+     "de": null,
+     "img": "mockups/byohidrat.png"
+    },
+    {
+     "id": "z2-gel-z2-40g",
+     "marca": "Z2",
+     "nome": "GEL Z2 40G",
+     "falado": "Gel Z2 40g",
+     "desc": "S/ Cafeína R$11 · C/ Cafeína R$13",
+     "preco": "11,00",
+     "de": null,
+     "img": "mockups/gel-z2.png"
+    },
+    {
+     "id": "z2-saltz-sache-15g",
+     "marca": "Z2",
+     "nome": "SALTZ SACHÊ 15G",
+     "falado": "SaltZ sachê 15g Z2",
+     "desc": "Repositor de Sais",
+     "preco": "6,90",
+     "de": null,
+     "img": "mockups/saltz.png"
+    },
+    {
+     "id": "body-action-energel-black-30g",
+     "marca": "Body Action",
+     "nome": "ENERGEL BLACK 30G",
+     "falado": "Energel Black 30g Body Action",
+     "desc": "Gel Carbo · C/ Cafeína",
+     "preco": "3,50",
+     "de": null,
+     "img": "mockups/energel-black.png"
+    },
+    {
+     "id": "probiotica-carb-up-gel-black",
+     "marca": "Probiótica",
+     "nome": "CARB UP GEL BLACK",
+     "falado": "Carb Up Gel Black Probiótica",
+     "desc": "30g · Unidade",
+     "preco": "5,80",
+     "de": null,
+     "img": "mockups/carbup.png"
+    },
+    {
+     "id": "dobro-carbs-gel",
+     "marca": "Dobro",
+     "nome": "CARBS GEL",
+     "falado": "Carbs Gel Dobro",
+     "desc": "S/ ou C/ Cafeína · Unidade",
+     "preco": "9,80",
+     "de": null,
+     "img": "mockups/carbs-neutro-fresh.png"
+    },
+    {
+     "id": "dobro-bt-gel-nitrato-30g",
+     "marca": "Dobro",
+     "nome": "BT GEL NITRATO 30G",
+     "falado": "BT Gel Nitrato 30g Dobro sem cafeína",
+     "desc": "Sem Cafeína · Unidade",
+     "preco": "12,00",
+     "de": null,
+     "img": "mockups/bt-gel-nitrato-sem-cafeina.png"
+    },
+    {
+     "id": "dobro-bt-gel-nitrato-30g-com-cafeina",
+     "marca": "Dobro",
+     "nome": "BT GEL NITRATO 30G COM CAFEÍNA",
+     "falado": "BT Gel Nitrato 30g Dobro com cafeína",
+     "desc": "Com Cafeína · Unidade",
+     "preco": "13,00",
+     "de": null,
+     "img": "mockups/bt-gel-nitrato-com-cafeina.png"
+    }
+   ]
+  },
+  {
+   "id": "aminoacidos",
+   "titulo": "Aminoácidos",
+   "texto": "Glutamina, beta-alanina e arginina em pó.",
+   "itens": [
+    {
+     "id": "byopure-beta-alanina-150g",
+     "marca": "Byopure",
+     "nome": "BETA ALANINA 150G",
+     "falado": "Beta Alanina 150g Byopure",
+     "desc": "Endurance · Em Pó",
+     "preco": "65,00",
+     "de": null,
+     "img": "mockups/beta-alanina.png"
+    },
+    {
+     "id": "byopure-glutamina-300g",
+     "marca": "Byopure",
+     "nome": "GLUTAMINA 300G",
+     "falado": "Glutamina 300g Byopure",
+     "desc": "L-Glutamina · Em Pó",
+     "preco": "79,00",
+     "de": null,
+     "img": "mockups/glutamina.png"
+    },
+    {
+     "id": "byopure-arginina-150g",
+     "marca": "Byopure",
+     "nome": "ARGININA 150G",
+     "falado": "Arginina 150g Byopure",
+     "desc": "L-Arginina · Em Pó",
+     "preco": "59,00",
+     "de": null,
+     "img": "mockups/arginina.png"
+    }
+   ]
+  },
+  {
+   "id": "vitaminas",
+   "titulo": "Vitaminas e saúde",
+   "texto": "Vitaminas, minerais, ômega 3 e colágeno para o dia a dia.",
+   "itens": [
+    {
+     "id": "byopure-magnesio-inositol",
+     "marca": "Byopure",
+     "nome": "MAGNÉSIO INOSITOL",
+     "falado": "Magnésio Inositol Byopure",
+     "desc": "Relaxamento · Sono · Foco",
+     "preco": "99,00",
+     "de": "149,90",
+     "img": "mockups/magnesio-inositol-byopure.png"
+    },
+    {
+     "id": "byopure-byovit-60cps",
+     "marca": "Byopure",
+     "nome": "BYOVIT 60CPS",
+     "falado": "Byovit 60 cáps Byopure",
+     "desc": "Polivitamínico + Polimineral",
+     "preco": "44,90",
+     "de": null,
+     "img": "mockups/byovit.png"
+    },
+    {
+     "id": "byopure-coenzyme-q10-60cps",
+     "marca": "Byopure",
+     "nome": "COENZYME Q10 60CPS",
+     "falado": "Coenzyme Q10 60 cáps Byopure",
+     "desc": "100mg · Energia Mitocondrial",
+     "preco": "86,00",
+     "de": null,
+     "img": "mockups/coenzima-q10.png"
+    },
+    {
+     "id": "byopure-tetra-magnesio-60cps",
+     "marca": "Byopure",
+     "nome": "TETRA MAGNÉSIO 60CPS",
+     "falado": "Tetra Magnésio 60 cáps Byopure",
+     "desc": "4 Formas de Magnésio",
+     "preco": "69,00",
+     "de": null,
+     "img": "mockups/tetra-magnesio-byopure.png"
+    },
+    {
+     "id": "byopure-vitamina-c-60cps",
+     "marca": "Byopure",
+     "nome": "VITAMINA C 60CPS",
+     "falado": "Vitamina C 60 cáps Byopure",
+     "desc": "Imunidade & Antioxidante",
+     "preco": "39,00",
+     "de": null,
+     "img": "mockups/vitamina-c-byopure.png"
+    },
+    {
+     "id": "byopure-vitamina-d-60cps",
+     "marca": "Byopure",
+     "nome": "VITAMINA D 60CPS",
+     "falado": "Vitamina D 60 cáps Byopure",
+     "desc": "2000UI · Ossos & Imunidade",
+     "preco": "39,00",
+     "de": null,
+     "img": "mockups/vitamina-d-byopure.png"
+    },
+    {
+     "id": "byopure-collagen-type-ii-msm",
+     "marca": "Byopure",
+     "nome": "COLLAGEN TYPE II + MSM",
+     "falado": "Collagen Type II + MSM Byopure",
+     "desc": "60 Cápsulas · Articulações",
+     "preco": "69,00",
+     "de": null,
+     "img": "mockups/collagen-tipo-2.png"
+    },
+    {
+     "id": "dowmith-omega-3-concentrado",
+     "marca": "Dowmith",
+     "nome": "ÔMEGA 3 CONCENTRADO",
+     "falado": "Ômega 3 Concentrado Dowmith",
+     "desc": "120 Cápsulas · EPA & DHA",
+     "preco": "129,00",
+     "de": null,
+     "img": "mockups/omega-3-dowmith.png"
+    },
+    {
+     "id": "dux-nutrition-omega-3-fish-oil",
+     "marca": "Dux Nutrition",
+     "nome": "ÔMEGA 3 FISH OIL",
+     "falado": "Ômega 3 Fish Oil Dux Nutrition",
+     "desc": "120 Cápsulas · Premium",
+     "preco": "109,90",
+     "de": null,
+     "img": "mockups/fish-oil-dux.png"
+    },
+    {
+     "id": "body-action-colageno-hidrolisado",
+     "marca": "Body Action",
+     "nome": "COLÁGENO HIDROLISADO",
+     "falado": "Colágeno Hidrolisado Body Action",
+     "desc": "200g · Verisol + Ác. Hialurônico",
+     "preco": "79,00",
+     "de": null,
+     "img": "mockups/colageno-bodyaction.png"
+    },
+    {
+     "id": "venom-labs-colageno-venom",
+     "marca": "Venom Labs",
+     "nome": "COLÁGENO VENOM",
+     "falado": "Colágeno Venom Labs 230g",
+     "desc": "230g · Verisol + Ác. Hialurônico",
+     "preco": "84,90",
+     "de": null,
+     "img": "mockups/colageno-venom-labs.png"
+    },
+    {
+     "id": "newnutrition-psyllium-216g",
+     "marca": "NewNutrition",
+     "nome": "PSYLLIUM 216G",
+     "falado": "Psyllium 216g NewNutrition",
+     "desc": "Fibras Naturais",
+     "preco": "59,00",
+     "de": null,
+     "img": "mockups/psyllium.png"
+    },
+    {
+     "id": "nutra-gold-melatonina-30ml",
+     "marca": "Nutra Gold",
+     "nome": "MELATONINA 30ML",
+     "falado": "Melatonina 30ml Nutra Gold",
+     "desc": "Sublingual · Sono Profundo",
+     "preco": "45,00",
+     "de": null,
+     "img": "mockups/melatonina-nutragold.png"
+    },
+    {
+     "id": "nutrition-propolis-60cps",
+     "marca": "Nutrition",
+     "nome": "PRÓPOLIS 60CPS",
+     "falado": "Própolis 60 cáps Nutrition",
+     "desc": "Imunidade Natural",
+     "preco": "39,90",
+     "de": null,
+     "img": "mockups/propolis.png"
+    },
+    {
+     "id": "nutrition-k2-d3-30cps",
+     "marca": "Nutrition",
+     "nome": "K2 + D3 30CPS",
+     "falado": "K2 + D3 30 cáps Nutrition",
+     "desc": "Menaquinona-7 + Colecalciferol",
+     "preco": "35,00",
+     "de": null,
+     "img": "mockups/k2-d3.png"
+    },
+    {
+     "id": "nutrition-b-complex-60cps",
+     "marca": "Nutrition",
+     "nome": "B COMPLEX 60CPS",
+     "falado": "B Complex 60 cáps Nutrition",
+     "desc": "Complexo B",
+     "preco": "43,00",
+     "de": null,
+     "img": "mockups/b-complex.png"
+    },
+    {
+     "id": "nutrition-picolinato-de-cromo",
+     "marca": "Nutrition",
+     "nome": "PICOLINATO DE CROMO",
+     "falado": "Picolinato de Cromo Nutrition",
+     "desc": "45 Cápsulas",
+     "preco": "39,00",
+     "de": null,
+     "img": "mockups/picolinato-de-cromo.png"
+    },
+    {
+     "id": "nutrition-joints-60cps",
+     "marca": "Nutrition",
+     "nome": "JOINTS 60CPS",
+     "falado": "Joints 60 cáps Nutrition",
+     "desc": "Articulações · Completo",
+     "preco": "65,00",
+     "de": null,
+     "img": "mockups/joints.png"
+    },
+    {
+     "id": "nutrition-nac-60cps",
+     "marca": "Nutrition",
+     "nome": "NAC 60CPS",
+     "falado": "NAC 60 cáps Nutrition",
+     "desc": "N-Acetil L-Cisteína",
+     "preco": "45,00",
+     "de": null,
+     "img": "mockups/nac.png"
+    }
+   ]
+  },
+  {
+   "id": "massa",
+   "titulo": "Hipercalóricos e carboidratos",
+   "texto": "Hipercalórico, maltodextrina, dextrose e palatinose para quem precisa de mais calorias.",
+   "itens": [
+    {
+     "id": "byopure-palatinose-300g",
+     "marca": "Byopure",
+     "nome": "PALATINOSE 300G",
+     "falado": "Palatinose 300g Byopure",
+     "desc": "Carboidrato Baixo IG",
+     "preco": "69,00",
+     "de": null,
+     "img": "mockups/palatinose.png"
+    },
+    {
+     "id": "dowmith-mammut-mass-3kg",
+     "marca": "Dowmith",
+     "nome": "MAMMUT MASS 3KG",
+     "falado": "Mammut Mass 3kg Dowmith",
+     "desc": "Hipercalórico · Ganho de Massa",
+     "preco": "114,90",
+     "de": null,
+     "img": "mockups/mammut.png"
+    },
+    {
+     "id": "newnutrition-maltodextrina-1kg",
+     "marca": "NewNutrition",
+     "nome": "MALTODEXTRINA 1KG",
+     "falado": "Maltodextrina 1kg NewNutrition",
+     "desc": "Carboidrato · Morango",
+     "preco": "45,00",
+     "de": null,
+     "img": "mockups/malto-dextrina.png"
+    },
+    {
+     "id": "body-action-dextrose-1kg",
+     "marca": "Body Action",
+     "nome": "DEXTROSE 1KG",
+     "falado": "Dextrose 1kg Body Action",
+     "desc": "Carbo Ignition MD",
+     "preco": "45,00",
+     "de": null,
+     "img": "mockups/dextrose.png"
+    }
+   ]
+  },
+  {
+   "id": "pastas",
+   "titulo": "Pastas e barras",
+   "texto": "Pasta de amendoim e barra proteica para o lanche.",
+   "itens": [
+    {
+     "id": "dr-peanut-pasta-de-amendoim-600g",
+     "marca": "Dr Peanut",
+     "nome": "PASTA DE AMENDOIM 600G",
+     "falado": "Pasta de Amendoim 600g Dr Peanut",
+     "desc": "Diversos Sabores",
+     "preco": "56,00",
+     "de": null,
+     "img": "mockups/dr-peanut.png"
+    },
+    {
+     "id": "dowmith-pasta-nutz-300g",
+     "marca": "Dowmith",
+     "nome": "PASTA NUTZ 300G",
+     "falado": "Pasta Nutz 300g Dowmith",
+     "desc": "Pasta de Amendoim",
+     "preco": "49,90",
+     "de": null,
+     "img": "mockups/nutz.png"
+    },
+    {
+     "id": "integralmedica-protein-crisp",
+     "marca": "Integralmédica",
+     "nome": "PROTEIN CRISP",
+     "falado": "Protein Crisp Integralmédica",
+     "desc": "Barra Proteica · Unidade",
+     "preco": "9,90",
+     "de": null,
+     "img": "mockups/protein-crisp-integralmedica.png"
+    }
+   ]
+  },
+  {
+   "id": "acessorios",
+   "titulo": "Acessórios",
+   "texto": "Coqueteleira, galão e camiseta da NF.",
+   "itens": [
+    {
+     "id": "nf-suplementos-coqueteleira-nf",
+     "marca": "NF Suplementos",
+     "nome": "COQUETELEIRA NF",
+     "falado": "Coqueteleira NF",
+     "desc": "Oficial · 600ml",
+     "preco": "15,00",
+     "de": null,
+     "img": "mockups/coqueteleira-nf.png"
+    },
+    {
+     "id": "integralmedica-coqueteleira",
+     "marca": "Integralmédica",
+     "nome": "COQUETELEIRA",
+     "falado": "Coqueteleira Integralmédica",
+     "desc": "600ml · Com Mola",
+     "preco": "20,00",
+     "de": null,
+     "img": "mockups/coqueteleira-integralmedica.png"
+    },
+    {
+     "id": "integralmedica-galao-2-2l",
+     "marca": "Integralmédica",
+     "nome": "GALÃO 2.2L",
+     "falado": "Galão 2,2 L Integralmédica",
+     "desc": "Hidratação · Treino do Dia",
+     "preco": "25,00",
+     "de": null,
+     "img": "mockups/galao.png"
+    },
+    {
+     "id": "nf-suplementos-camiseta-dry-fit-nf",
+     "marca": "NF Suplementos",
+     "nome": "CAMISETA DRY FIT NF",
+     "falado": "Camiseta Dry Fit NF",
+     "desc": "Oficial · Tecido Tecnológico",
+     "preco": "29,90",
+     "de": null,
+     "img": "mockups/camiseta-nf.png"
+    }
+   ]
+  }
+ ]
+}

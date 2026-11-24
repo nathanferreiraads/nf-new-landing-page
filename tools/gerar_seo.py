@@ -29,39 +29,21 @@ def esc(s): return html.escape(s, quote=True)
 
 # ------------------------------------------------------------------ 1. catalogo
 def produtos_do_catalogo():
-    c = rd("catalogo/index.html")
-    vistos, out = set(), []
-    secao = ""
-    for m in re.finditer(r'<section[^>]*id="([^"]+)"|<a href="https://wa\.me[^"]*" class="prod-card[^"]*"[^>]*>(.*?)</a>', c, re.S):
-        if m.group(1): secao = m.group(1); continue
-        b = m.group(2)
-        nome = txt(re.search(r'prod-card-name">(.*?)</div>', b, re.S).group(1))
-        marca = txt(re.search(r'prod-card-brand">(.*?)</div>', b, re.S).group(1))
-        desc = re.search(r'prod-card-desc">(.*?)</div>', b, re.S)
-        img = re.search(r'<img src="([^"]+)"', b).group(1)
-        v = re.search(r'prod-price-value">(\d+)</span>(?:<span class="prod-price-cents">,(\d+))?', b)
-        if not v: continue
-        preco = "%s.%s" % (v.group(1), (v.group(2) or "00"))
-        old = re.search(r'prod-price-old">R\$ ([\d\.]+,\d+)', b)
-        chave = (marca.lower(), nome.lower())
-        if chave in vistos: continue          # o mesmo produto aparece em mais de uma secao (oferta + categoria)
-        vistos.add(chave)
-        out.append({"nome": nome, "marca": marca, "desc": txt(desc.group(1)) if desc else "", "secao": secao,
-                    "img": SITE + "/catalogo/" + img, "preco": preco, "de": old.group(1) if old else None})
-    combos = []
-    for m in re.finditer(r'<div class="agosto-combo[^"]*">(.*?)<a href', c, re.S):
-        b = m.group(1)
-        t = txt(re.search(r'combo-title">(.*?)</div>', b, re.S).group(1))
-        v = re.search(r'combo-price-value">(\d+)</span>(?:<span class="combo-price-cents">,(\d+))?', b)
-        d = re.search(r'combo-desc">(.*?)</div>', b, re.S)
-        combos.append({"nome": t, "desc": txt(d.group(1)) if d else "", "preco": "%s,%s" % (v.group(1), v.group(2) or "00")})
+    # 24/11/2026: a fonte e o tools/catalogo/produtos.json (o mesmo que monta a pagina pelo gerar_catalogo.py)
+    d = json.loads(rd("tools/catalogo/produtos.json"))
+    out = []
+    for c in d["categorias"]:
+        for p in c["itens"]:
+            out.append({"nome": p["nome"], "marca": p["marca"], "desc": p["desc"], "secao": c["id"], "titulo_secao": c["titulo"],
+                        "img": SITE + "/catalogo/" + p["img"], "preco": p["preco"].replace(".", "").replace(",", "."), "de": p.get("de")})
+    combos = [{"nome": x["nome"], "desc": x["desc"], "preco": x["preco"]} for x in d["ofertas"]["combos"]]
     return out, combos
 
 def schema_catalogo(prods):
     itens = []
     for i, p in enumerate(prods, 1):
         prod = {"@type": "Product", "name": "%s %s" % (p["marca"], p["nome"].title()), "brand": {"@type": "Brand", "name": p["marca"]},
-                "image": p["img"], "category": p["secao"],
+                "image": p["img"], "category": p.get("titulo_secao") or p["secao"],
                 "offers": {"@type": "Offer", "price": p["preco"], "priceCurrency": "BRL", "availability": "https://schema.org/InStock",
                            "url": SITE + "/catalogo/", "seller": {"@id": SITE + "/#store"},
                            "areaServed": {"@type": "City", "name": "Votuporanga"}}}
@@ -277,7 +259,7 @@ def llms(prods, combos, arts):
     sec = None
     for p in prods:
         if p["secao"] != sec:
-            sec = p["secao"]; full += f"\n### {nomes_secao.get(sec, sec)}\n"
+            sec = p["secao"]; full += f"\n### {p.get('titulo_secao') or nomes_secao.get(sec, sec)}\n"
         preco = p["preco"].replace(".", ",")
         de = f" (de R$ {p['de']})" if p["de"] else ""
         full += f"- {p['marca']} {p['nome'].title()}" + (f" · {p['desc']}" if p["desc"] else "") + f": R$ {preco}{de}\n"
