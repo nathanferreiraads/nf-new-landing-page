@@ -182,3 +182,5 @@ body.aberto{overflow:hidden}
 .obs-aviso{display:block;font-size:13px;color:#000;background:#ffe6d6;border-radius:10px;padding:8px 10px;margin-bottom:8px;line-height:1.35}
 @media(min-width:760px){.grade-of{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(min-width:1180px){.grade-of{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.rodape-feito{font-size:13px;color:#cfcfcf;border-top:1px solid #2e2e2e;padding-top:14px;margin-top:16px!important}
+.rodape-feito a{font-weight:700}

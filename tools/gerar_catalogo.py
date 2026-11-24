@@ -186,6 +186,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 Seg a sex 9h às 18h · Sáb 9h às 12h · WhatsApp <a class="foot-social" href="https://wa.me/{WA}" target="_blank" rel="noopener">(17) 99758-7526</a> · <a href="https://www.instagram.com/_nfsuplementos" target="_blank" rel="noopener">@_nfsuplementos</a></p>
 <p class="rodape-nav"><a href="/">Início</a><a href="/blog/">Blog</a><a href="/#perguntas">Perguntas frequentes</a></p>
 <p class="rodape-obs">Preços atualizados em {atual}, sujeitos ao estoque do dia. Suplementos não são medicamentos e não substituem uma alimentação equilibrada.</p>
+<p class="rodape-feito">Site desenvolvido por <a href="https://nfperformance.com.br/" target="_blank" rel="noopener">NF Performance</a>, agência de tráfego pago.</p>
 </footer>
 
 <button type="button" class="barra" id="barra" hidden aria-haspopup="dialog" aria-controls="pedido">
