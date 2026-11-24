@@ -91,7 +91,8 @@ main{max-width:var(--larg);margin:0 auto;padding:0 16px}
 .grade-of{grid-template-columns:1fr;gap:12px}
 @media(min-width:760px){.grade-of{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}}
 .p-destaque{flex-direction:row;flex-wrap:wrap;align-items:stretch;background:#fff;color:#000;border-radius:18px;padding:12px;gap:0 14px}
-.p-destaque .p-img{width:36%;min-width:112px;align-self:center}
+.p-destaque .p-img{width:38%;min-width:118px;align-self:center}
+.p-destaque .p-img img{width:96%;height:96%}
 .p-destaque .p-txt{flex:1;min-width:0;padding-top:2px}
 .p-destaque .p-nome{font-size:clamp(24px,6vw,34px)}
 .p-destaque .p-pe{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:12px}
